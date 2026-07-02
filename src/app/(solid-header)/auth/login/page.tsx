@@ -46,7 +46,7 @@ export default function SignInPage() {
                                 className="mt-2 h-[51px] px-8 cursor-pointer font-semibold shadow-lg shadow-black/20"
                                 onClick={submit}
                             >
-                                Register Now
+                                Login
                             </Button>
                         </form>
                     </div>
