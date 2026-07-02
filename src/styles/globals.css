@@ -9,8 +9,8 @@
   --color-gray-bg: #F7F7F7;
   --color-footer-bg: #FAFAFA;
   --color-red: #F04438;
-  --font-heading: "Area Inktrap", serif;
-  --font-body: "Lato", sans-serif;
+  --font-heading: var(--font-areainktrap);
+  --font-body: var(--font-lato);
 }
 
 html {

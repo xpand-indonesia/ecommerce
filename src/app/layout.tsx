@@ -1,11 +1,28 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
+import localFont from 'next/font/local';
 import "../styles/globals.css";
 
 const lato = Lato({
   variable: "--font-lato",
   subsets: ["latin"],
   weight: ["300", "400", "700", "900"],
+});
+
+const areaInktrap = localFont({
+  src: [
+    {
+      path: '../fonts/AreaInktrap/AreaInktrap_Regular.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/AreaInktrap/AreaInktrap_Bold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-areainktrap',
 });
 
 export const metadata: Metadata = {
@@ -20,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${lato.variable} antialiased`}>
+    <html lang="en" className={`${lato.variable} ${areaInktrap.variable} antialiased`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
