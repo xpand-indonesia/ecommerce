@@ -8,7 +8,7 @@ export default function TransparentHeaderLayout({
 }>) {
     return (
         <>
-            <Navbar />
+            <Navbar transparent />
             {children}
             <Footer />
         </>

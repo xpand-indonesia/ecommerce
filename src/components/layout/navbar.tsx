@@ -4,16 +4,16 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-function Navbar() {
+function Navbar({ transparent = false }: { transparent?: boolean }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-50 border-b border-white/20">
+    <header className={`absolute top-0 left-0 right-0 z-50 border-b border-white/20 ${transparent ? '' : 'bg-white'}`}>
       <nav className="container mx-auto flex items-center justify-between h-[75px] px-6 lg:px-[60px]">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <Image
-            src="/images/mock/mock_logo_white.png"
+            src={transparent ? "/images/mock/mock_logo_white.png" : "/images/mock/mock_logo.png"}
             alt="Logo"
             width={0}
             height={43}
@@ -26,25 +26,25 @@ function Navbar() {
         <div className="hidden md:flex items-center gap-8">
           <Link
             href="#"
-            className="text-white font-body text-base hover:text-white/80 transition-colors"
+            className={`font-body text-base hover:text-white/80 transition-colors ${transparent ? 'text-white' : ''}`}
           >
             Coffee+
           </Link>
           <Link
             href="#"
-            className="text-white font-body text-base hover:text-white/80 transition-colors"
+            className={`font-body text-base hover:text-white/80 transition-colors ${transparent ? 'text-white' : ''}`}
           >
             Tea+
           </Link>
           <Link
             href="#"
-            className="text-white font-body text-base hover:text-white/80 transition-colors"
+            className={`font-body text-base hover:text-white/80 transition-colors ${transparent ? 'text-white' : ''}`}
           >
             Chocolate+
           </Link>
           <Link
             href="#"
-            className="text-white font-body text-base hover:text-white/80 transition-colors"
+            className={`font-body text-base hover:text-white/80 transition-colors ${transparent ? 'text-white' : ''}`}
           >
             Support
           </Link>
@@ -56,7 +56,7 @@ function Navbar() {
           <button
             type="button"
             aria-label="User account"
-            className="text-white hover:text-white/80 transition-colors cursor-pointer"
+            className={`hover:text-white/80 transition-colors cursor-pointer ${transparent ? 'text-white' : ''}`}
           >
             <svg
               width="24"
@@ -76,7 +76,7 @@ function Navbar() {
           <button
             type="button"
             aria-label="Shopping cart"
-            className="text-white hover:text-white/80 transition-colors cursor-pointer"
+            className={`hover:text-white/80 transition-colors cursor-pointer ${transparent ? 'text-white' : ''}`}
           >
             <svg
               width="24"
@@ -97,7 +97,7 @@ function Navbar() {
           <button
             type="button"
             aria-label="Search"
-            className="text-white hover:text-white/80 transition-colors cursor-pointer"
+            className={`hover:text-white/80 transition-colors cursor-pointer ${transparent ? 'text-white' : ''}`}
           >
             <svg
               width="24"
