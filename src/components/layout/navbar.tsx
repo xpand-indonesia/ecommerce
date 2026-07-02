@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -11,25 +12,14 @@ function Navbar() {
       <nav className="container mx-auto flex items-center justify-between h-[75px] px-6 lg:px-[60px]">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
-          <svg
-            width="32"
-            height="32"
-            viewBox="0 0 32 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M16 4C16 4 12 8 8 8C4 8 4 12 4 16C4 20 8 28 16 28C24 28 28 20 28 16C28 12 28 8 24 8C20 8 16 4 16 4Z"
-              fill="white"
-            />
-            <path
-              d="M16 8C16 8 14 10 12 10C10 10 10 12 10 14C10 16 12 20 16 20C20 20 22 16 22 14C22 12 22 10 20 10C18 10 16 8 16 8Z"
-              fill="#003813"
-            />
-          </svg>
-          <span className="text-white font-heading font-bold text-xl tracking-wide">
-            COFELTY
-          </span>
+          <Image
+            src="/images/mock/mock_logo_white.png"
+            alt="Logo"
+            width={0}
+            height={43}
+            sizes="100vw"
+            className="w-auto h-[43px]"
+          />
         </Link>
 
         {/* Desktop Navigation */}
