@@ -26,25 +26,25 @@ function Navbar({ transparent = false }: { transparent?: boolean }) {
         <div className="hidden md:flex items-center gap-8">
           <Link
             href="#"
-            className={`font-body text-base hover:text-white/80 transition-colors ${transparent ? 'text-white' : ''}`}
+            className={`font-body text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
           >
             Coffee+
           </Link>
           <Link
             href="#"
-            className={`font-body text-base hover:text-white/80 transition-colors ${transparent ? 'text-white' : ''}`}
+            className={`font-body text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
           >
             Tea+
           </Link>
           <Link
             href="#"
-            className={`font-body text-base hover:text-white/80 transition-colors ${transparent ? 'text-white' : ''}`}
+            className={`font-body text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
           >
             Chocolate+
           </Link>
           <Link
             href="#"
-            className={`font-body text-base hover:text-white/80 transition-colors ${transparent ? 'text-white' : ''}`}
+            className={`font-body text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
           >
             Support
           </Link>
@@ -53,30 +53,32 @@ function Navbar({ transparent = false }: { transparent?: boolean }) {
         {/* Desktop Icons */}
         <div className="hidden md:flex items-center gap-8">
           {/* User Icon */}
-          <button
-            type="button"
-            aria-label="User account"
-            className={`hover:text-white/80 transition-colors cursor-pointer ${transparent ? 'text-white' : ''}`}
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+          <Link href="/auth/login">
+            <button
+              type="button"
+              aria-label="User account"
+              className={`transition-colors cursor-pointer ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
             >
-              <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" />
-              <path d="M20.59 22c0-3.87-3.85-7-8.59-7s-8.59 3.13-8.59 7" />
-            </svg>
-          </button>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" />
+                <path d="M20.59 22c0-3.87-3.85-7-8.59-7s-8.59 3.13-8.59 7" />
+              </svg>
+            </button>
+          </Link>
           {/* Cart Icon */}
           <button
             type="button"
             aria-label="Shopping cart"
-            className={`hover:text-white/80 transition-colors cursor-pointer ${transparent ? 'text-white' : ''}`}
+            className={`transition-colors cursor-pointer ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
           >
             <svg
               width="24"
@@ -97,7 +99,7 @@ function Navbar({ transparent = false }: { transparent?: boolean }) {
           <button
             type="button"
             aria-label="Search"
-            className={`hover:text-white/80 transition-colors cursor-pointer ${transparent ? 'text-white' : ''}`}
+            className={`transition-colors cursor-pointer ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
           >
             <svg
               width="24"
@@ -186,25 +188,27 @@ function Navbar({ transparent = false }: { transparent?: boolean }) {
             Support
           </Link>
           <div className="flex items-center gap-6 pt-2 border-t border-white/20">
-            <button
-              type="button"
-              aria-label="User account"
-              className="text-white cursor-pointer"
-            >
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+            <Link href="/auth/login">
+              <button
+                type="button"
+                aria-label="User account"
+                className="text-white cursor-pointer"
               >
-                <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" />
-                <path d="M20.59 22c0-3.87-3.85-7-8.59-7s-8.59 3.13-8.59 7" />
-              </svg>
-            </button>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" />
+                  <path d="M20.59 22c0-3.87-3.85-7-8.59-7s-8.59 3.13-8.59 7" />
+                </svg>
+              </button>
+            </Link>
             <button
               type="button"
               aria-label="Shopping cart"
