@@ -8,7 +8,7 @@ function Navbar() {
 
   return (
     <header className="absolute top-0 left-0 right-0 z-50 border-b border-white/20">
-      <nav className="container mx-auto flex items-center justify-between h-[75px] px-6 lg:px-[60px] pl-[60px]">
+      <nav className="container mx-auto flex items-center justify-between h-[75px] px-6 lg:px-[60px]">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <svg

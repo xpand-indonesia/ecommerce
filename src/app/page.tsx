@@ -337,7 +337,7 @@ export default function Home() {
             {/* Left Image Frame */}
             <div className="relative w-full lg:w-[604px] aspect-[604/455] rounded-[32px] overflow-hidden bg-gray-bg border border-gray-light/35 shadow-sm">
               <Image
-                src="/images/visit-section-1.png"
+                src="/images/mock/mock_image_1.png"
                 alt="Beautiful local coffee cafe interior"
                 fill
                 className="object-cover"
@@ -365,7 +365,7 @@ export default function Home() {
             {/* Right Image Frame */}
             <div className="relative w-full lg:w-[604px] aspect-[604/455] rounded-[32px] overflow-hidden bg-gray-bg border border-gray-light/35 shadow-sm">
               <Image
-                src="/images/visit-section-2.png"
+                src="/images/mock/mock_image_1.png"
                 alt="Artisan coffee drinks presentation"
                 fill
                 className="object-cover"
@@ -408,7 +408,7 @@ export default function Home() {
             {/* Bottom Full-width Image */}
             <div className="relative w-full aspect-[1240/455] rounded-[32px] overflow-hidden bg-gray-bg border border-gray-light/35 shadow-sm">
               <Image
-                src="/images/product-section.png"
+                src="/images/mock/mock_image_2.png"
                 alt="Cofelty coffee processing and packaging facility"
                 fill
                 className="object-cover"
@@ -419,7 +419,7 @@ export default function Home() {
 
 
         {/* ================= CATEGORY / CARDS SECTION ================= */}
-        <section className="w-full max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-3">
+        <section className="w-full max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-4">
           {/* Card 1: Single Origins */}
           <div className="relative h-[588px] flex flex-col justify-between items-center text-center p-8 md:p-12 text-white overflow-hidden group">
             {/* Background image */}
@@ -477,7 +477,36 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Card 3: Wholesale */}
+          {/* Card 2: Bulk purchasing */}
+          <div className="relative h-[588px] flex flex-col justify-between items-center text-center p-8 md:p-12 text-white overflow-hidden group border-y lg:border-y-0 lg:border-x border-white/10">
+            {/* Background image */}
+            <Image
+              src="/images/card-bulk.png"
+              alt="Bulk purchase burlap coffee bean bags"
+              fill
+              className="object-cover -z-10 group-hover:scale-105 transition-transform duration-500 brightness-[0.7]"
+            />
+            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/45 transition-colors duration-300 -z-10" />
+
+            <div className="h-10" />
+
+            {/* Main Content */}
+            <div className="flex flex-col items-center gap-6 mt-auto max-w-[320px] z-10">
+              <h3 className="font-heading font-bold text-3xl leading-tight">
+                Bulk purchasing
+              </h3>
+              <p className="font-body text-sm leading-relaxed text-white/95">
+                Join us as a partner. Wholesale is at the core of our operations. Funki{" "}
+                {`isn't`} just another publicly traded company filled with investors and
+                venture capitalists.
+              </p>
+              <Button variant="outline-white" className="mt-2 h-[51px] px-8 cursor-pointer">
+                Learn More
+              </Button>
+            </div>
+          </div>
+
+          {/* Card 4: Wholesale */}
           <div className="relative h-[588px] flex flex-col justify-between items-center text-center p-8 md:p-12 text-white overflow-hidden group">
             {/* Background image */}
             <Image
