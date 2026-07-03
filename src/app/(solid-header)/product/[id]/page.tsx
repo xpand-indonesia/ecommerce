@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button";
 import Container from "@/components/ui/container";
 import Image from "next/image";
+import BrewProcessSection from "./components/brew-process-section";
 
 export default function ProductDetailPage() {
     return (
         <main className="pt-[75px]">
-            <div className="container mx-auto mb-10">
+            <section className="container mx-auto mb-10">
                 <div className="flex divide-x divide-gray-300">
                     <div className="w-[41%] pr-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -43,7 +44,7 @@ export default function ProductDetailPage() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <section className="bg-gray-100">
                 <Container>
                     <div className="flex px-4 gap-6">
@@ -77,6 +78,7 @@ export default function ProductDetailPage() {
                     </div>
                 </Container>
             </section>
+            <BrewProcessSection />
         </main>
     );
 }
