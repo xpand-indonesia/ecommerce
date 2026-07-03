@@ -1,6 +1,8 @@
 'use client';
 
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/form/field/input";
+import { Label } from "@/components/ui/form/label";
 import Image from "next/image";
 
 export default function RegisterPage() {
@@ -32,59 +34,38 @@ export default function RegisterPage() {
                         <form className="flex flex-col gap-4">
                             <div className="flex gap-4">
                                 <div className="flex-1 flex flex-col gap-2">
-                                    <label className="text-sm color-[#414651]">First Name</label>
-                                    <input
-                                        className="w-full px-4 bg-white border border-[#E9EAEB] rounded-full h-[51px] font-body text-base outline-none focus:border-primary transition-colors text-dark"
-                                        placeholder="John"
-                                    />
+                                    <Label>First Name</Label>
+                                    <Input type="text" placeholder="John" />
                                 </div>
                                 <div className="flex-1 flex flex-col gap-2">
-                                    <label className="text-sm color-[#414651]">Last Name</label>
-                                    <input
-                                        className="w-full px-4 bg-white border border-[#E9EAEB] rounded-full h-[51px] font-body text-base outline-none focus:border-primary transition-colors text-dark"
-                                        placeholder="Doe"
-                                    />
+                                    <Label>Last Name</Label>
+                                    <Input type="text" placeholder="Doe" />
                                 </div>
                             </div>
                             <div className="w-full">
                                 <div className="flex-1 flex flex-col gap-2">
-                                    <label className="text-sm color-[#414651]">Username</label>
-                                    <input
-                                        className="w-full px-4 bg-white border border-[#E9EAEB] rounded-full h-[51px] font-body text-base outline-none focus:border-primary transition-colors text-dark"
-                                        placeholder="Enter username"
-                                    />
+                                    <Label>Username</Label>
+                                    <Input type="text" placeholder="Enter username" />
                                 </div>
                             </div>
                             <div className="flex gap-4">
                                 <div className="flex-1 flex flex-col gap-2">
-                                    <label className="text-sm color-[#414651]">Email Address</label>
-                                    <input
-                                        className="w-full px-4 bg-white border border-[#E9EAEB] rounded-full h-[51px] font-body text-base outline-none focus:border-primary transition-colors text-dark"
-                                        placeholder="Enter Email Address"
-                                    />
+                                    <Label>Email Address</Label>
+                                    <Input type="text" placeholder="Enter Email Address" />
                                 </div>
                                 <div className="flex-1 flex flex-col gap-2">
-                                    <label className="text-sm color-[#414651]">Confirm Email</label>
-                                    <input
-                                        className="w-full px-4 bg-white border border-[#E9EAEB] rounded-full h-[51px] font-body text-base outline-none focus:border-primary transition-colors text-dark"
-                                        placeholder="Re-Enter Email Address"
-                                    />
+                                    <Label>Confirm Email</Label>
+                                    <Input type="text" placeholder="Re-Enter Email Address" />
                                 </div>
                             </div>
                             <div className="flex gap-4">
                                 <div className="flex-1 flex flex-col gap-2">
-                                    <label className="text-sm color-[#414651]">Password</label>
-                                    <input
-                                        className="w-full px-4 bg-white border border-[#E9EAEB] rounded-full h-[51px] font-body text-base outline-none focus:border-primary transition-colors text-dark"
-                                        placeholder="Enter Password"
-                                    />
+                                    <Label>Password</Label>
+                                    <Input type="text" placeholder="Enter Password" />
                                 </div>
                                 <div className="flex-1 flex flex-col gap-2">
-                                    <label className="text-sm color-[#414651]">Confirm Password</label>
-                                    <input
-                                        className="w-full px-4 bg-white border border-[#E9EAEB] rounded-full h-[51px] font-body text-base outline-none focus:border-primary transition-colors text-dark"
-                                        placeholder="Re-Enter Password"
-                                    />
+                                    <Label>Confirm Password</Label>
+                                    <Input type="text" placeholder="Re-Enter Password" />
                                 </div>
                             </div>
                             <Button
