@@ -1,6 +1,7 @@
 'use client';
 
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/form/field/checkbox";
 import { Input } from "@/components/ui/form/field/input";
 import { Label } from "@/components/ui/form/label";
 import Image from "next/image";
@@ -39,6 +40,10 @@ export default function SignInPage() {
                                 <div className="w-full flex flex-col gap-2">
                                     <Label>Password</Label>
                                     <Input type="password" placeholder="Enter Password" />
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <Checkbox id="remember-me" />
+                                    <Label htmlFor="remember-me" className="cursor-pointer">Remember Me</Label>
                                 </div>
                                 <Button
                                     variant="primary"
