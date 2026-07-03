@@ -25,26 +25,26 @@ function Navbar({ transparent = false }: { transparent?: boolean }) {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           <Link
-            href="#"
-            className={`font-body text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
+            href="/catalog/coffee"
+            className={`text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
           >
             Coffee+
           </Link>
           <Link
-            href="#"
-            className={`font-body text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
+            href="/catalog/tea"
+            className={`text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
           >
             Tea+
           </Link>
           <Link
-            href="#"
-            className={`font-body text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
+            href="/catalog/chocolate"
+            className={`text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
           >
             Chocolate+
           </Link>
           <Link
             href="#"
-            className={`font-body text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
+            className={`text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
           >
             Support
           </Link>

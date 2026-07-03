@@ -11,7 +11,7 @@ export default function SignInPage() {
     const submit = () => { }
 
     return (
-        <main className="flex-1 w-full flex flex-co pt-[75px]">
+        <main className="flex-1 w-full flex flex-col pt-[75px]">
             <section className="container mx-auto py-8">
                 <div className="flex gap-6">
                     <div className="flex-1">
