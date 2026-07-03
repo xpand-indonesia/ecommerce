@@ -9,12 +9,12 @@ const inputVariants = cva(
     `,
     {
         variants: {
-            variant: {
+            size: {
                 md: 'h-[51px] px-4 text-base',
             },
         },
         defaultVariants: {
-            variant: 'md',
+            size: 'md',
         },
     },
 );
@@ -22,14 +22,14 @@ const inputVariants = cva(
 function Input({
     className,
     type,
-    variant,
+    size,
     ...props
 }: React.ComponentProps<'input'> & VariantProps<typeof inputVariants>) {
     return (
         <input
             data-slot="input"
             type={type}
-            className={cn(inputVariants({ variant }), className)}
+            className={cn(inputVariants({ size }), className)}
             {...props}
         />
     );
