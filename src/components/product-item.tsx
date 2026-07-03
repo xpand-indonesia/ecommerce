@@ -32,7 +32,7 @@ const ProductItem = ({ id, image, name, price, discount, stock, isBestSeller = f
         <div className="flex flex-col gap-4 group">
             {/* Product Image */}
             <Link href={`/product/${id}`}>
-                <div className="relative w-full aspect-square rounded-[32px] overflow-hidden bg-gray-300">
+                <div className="relative w-full aspect-square rounded-[32px] overflow-hidden bg-gray-200">
                     <Image
                         src={imageUrl}
                         alt="Funki Mushroom Coffee pack"
