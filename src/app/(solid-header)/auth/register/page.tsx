@@ -43,9 +43,12 @@ export default function RegisterPage() {
                                 </div>
                             </div>
                             <div className="w-full">
-                                <div className="flex-1 flex flex-col gap-2">
+                                <div className="flex flex-col gap-2">
                                     <Label>Username</Label>
                                     <Input type="text" placeholder="Enter username" />
+                                    <span className="text-xs text-gray-500">
+                                        Only lower case letter (a-z) and numbers (0-9) are allowed
+                                    </span>
                                 </div>
                             </div>
                             <div className="flex gap-4">
