@@ -89,6 +89,46 @@ export function Footer() {
               </h3>
               {/* Social Icons matching design */}
               <div className="flex items-center gap-4">
+                {/* Facebook */}
+                <Link
+                  href="#"
+                  aria-label="Facebook"
+                  className="w-8 h-8 rounded-full border border-gray-light flex items-center justify-center text-gray hover:text-primary hover:border-primary transition-all duration-200"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                  </svg>
+                </Link>
+                {/* Linkedin */}
+                <Link
+                  href="#"
+                  aria-label="Linkedin"
+                  className="w-8 h-8 rounded-full border border-gray-light flex items-center justify-center text-gray hover:text-primary hover:border-primary transition-all duration-200"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect x="2" y="9" width="4" height="12" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                </Link>
                 {/* Instagram */}
                 <Link
                   href="#"
@@ -110,10 +150,10 @@ export function Footer() {
                     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
                   </svg>
                 </Link>
-                {/* Facebook */}
+                {/* Tiktok */}
                 <Link
                   href="#"
-                  aria-label="Facebook"
+                  aria-label="Tiktok"
                   className="w-8 h-8 rounded-full border border-gray-light flex items-center justify-center text-gray hover:text-primary hover:border-primary transition-all duration-200"
                 >
                   <svg
@@ -126,26 +166,7 @@ export function Footer() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   >
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                  </svg>
-                </Link>
-                {/* Twitter / X */}
-                <Link
-                  href="#"
-                  aria-label="Twitter"
-                  className="w-8 h-8 rounded-full border border-gray-light flex items-center justify-center text-gray hover:text-primary hover:border-primary transition-all duration-200"
-                >
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5v3a4 4 0 0 1-5-5" />
                   </svg>
                 </Link>
                 {/* YouTube */}
@@ -234,7 +255,7 @@ export function Footer() {
         <div className="flex flex-col gap-2.5">
           <hr className="border-t border-gray-300 w-full" />
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left text-sm text-gray font-body py-1">
-            <span className="font-semibold text-dark">PT EXPAND</span>
+            <span className="font-semibold text-dark">PT EXPAND INDONESIA</span>
             <span>ALL RIGHTS RESERVED 2026 FUNKI+ COFFEE</span>
           </div>
         </div>
