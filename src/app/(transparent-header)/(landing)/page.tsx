@@ -2,157 +2,16 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import HeroSection from "./components/hero";
-import BannerSection from "./components/banner";
+import HeroSection from "./components/hero-section";
+import BannerSection from "./components/banner-section";
+import ProductSection from "./components/product-section";
 
 export default function LandingPage() {
 
   return (
     <main className="flex-1 w-full flex flex-col">
       <HeroSection />
-
-      {/* ================= PRODUCT SECTION ================= */}
-      <section id="catalog" className="w-full bg-white py-16 md:py-24 px-6 lg:px-[100px] max-w-[1440px] mx-auto flex flex-col gap-8 md:gap-12">
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <div className="flex flex-col gap-4 max-w-[877px]">
-            <h2 className="font-heading font-normal text-3xl md:text-5xl text-dark leading-tight">
-              Optimise for your needs
-            </h2>
-            <p className="font-body text-base text-gray">
-              For best results, commit to 90 days. If you’re not satisfied, our 30-day risk-free guarantee lets you return it - no questions asked
-            </p>
-          </div>
-
-          <Button variant="outline" className="h-[51px] px-8 cursor-pointer hover:shadow-md shrink-0 self-start md:self-auto">
-            See All
-          </Button>
-        </div>
-
-        {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full mt-4">
-          {/* Product Card 1 */}
-          <div className="flex flex-col gap-5 group">
-            {/* Product Image Frame */}
-            <div className="relative aspect-[392/400] w-full rounded-[32px] overflow-hidden bg-gray-bg border border-gray-light/35">
-              <Image
-                src="/images/product-1.png"
-                alt="Funki Mushroom Coffee pack"
-                fill
-                className="object-cover group-hover:scale-102 transition-transform duration-300"
-              />
-
-              {/* Slashed red badge for "Best Seller" */}
-              <div className="absolute top-4 left-4 bg-red text-white font-body text-sm font-semibold px-4 py-1.5 rounded-full shadow-sm">
-                Best Seller
-              </div>
-            </div>
-
-            {/* Product Details */}
-            <div className="flex flex-col gap-2">
-              <h3 className="font-body font-bold text-xl text-dark group-hover:text-primary transition-colors">
-                Funki Mushroom Coffee
-              </h3>
-
-              {/* Pricing layout */}
-              <div className="flex items-center gap-3">
-                <span className="bg-red/10 text-red font-body text-xs font-bold px-2 py-0.5 rounded-md">
-                  OFF 20%
-                </span>
-                <span className="font-body font-bold text-base text-dark">
-                  Rp 60,000
-                </span>
-                <span className="font-body text-sm text-gray line-through">
-                  Rp 75,000
-                </span>
-              </div>
-            </div>
-
-            {/* Action Button */}
-            <Button variant="outline" className="w-full cursor-pointer">
-              Add to cart
-            </Button>
-          </div>
-
-          {/* Product Card 2 */}
-          <div className="flex flex-col gap-5 group">
-            {/* Product Image Frame */}
-            <div className="relative aspect-[392/400] w-full rounded-[32px] overflow-hidden bg-gray-bg border border-gray-light/35">
-              <Image
-                src="/images/product-2.png"
-                alt="Organic Chai Latte pack"
-                fill
-                className="object-cover group-hover:scale-102 transition-transform duration-300"
-              />
-            </div>
-
-            {/* Product Details */}
-            <div className="flex flex-col gap-2">
-              <h3 className="font-body font-bold text-xl text-dark group-hover:text-primary transition-colors">
-                Organic Chai Latte
-              </h3>
-
-              {/* Pricing layout */}
-              <div className="flex items-center gap-3">
-                <span className="bg-red/10 text-red font-body text-xs font-bold px-2 py-0.5 rounded-md">
-                  OFF 10%
-                </span>
-                <span className="font-body font-bold text-base text-dark">
-                  Rp 68,000
-                </span>
-                <span className="font-body text-sm text-gray line-through">
-                  Rp 75,000
-                </span>
-              </div>
-            </div>
-
-            {/* Action Button */}
-            <Button variant="outline" className="w-full cursor-pointer">
-              Add to cart
-            </Button>
-          </div>
-
-          {/* Product Card 3 (Out of Stock) */}
-          <div className="flex flex-col gap-5 group">
-            {/* Product Image Frame */}
-            <div className="relative aspect-[392/400] w-full rounded-[32px] overflow-hidden bg-gray-bg border border-gray-light/35">
-              <Image
-                src="/images/product-3.png"
-                alt="Vanilla Hazelnut Brew pack"
-                fill
-                className="object-cover brightness-90 group-hover:scale-102 transition-transform duration-300"
-              />
-
-              {/* Semi-transparent red out of stock overlay */}
-              <div className="absolute inset-0 bg-red/40 backdrop-blur-xxs flex items-center justify-center">
-                <span className="text-white font-body font-black text-2xl tracking-wider uppercase px-6 py-3 border-2 border-white rounded-lg">
-                  Out of Stock
-                </span>
-              </div>
-            </div>
-
-            {/* Product Details */}
-            <div className="flex flex-col gap-2">
-              <h3 className="font-body font-bold text-xl text-dark group-hover:text-primary transition-colors">
-                Vanilla Hazelnut Brew
-              </h3>
-
-              {/* Pricing layout */}
-              <div className="flex items-center gap-3">
-                <span className="font-body font-bold text-base text-dark">
-                  Rp 70,000
-                </span>
-              </div>
-            </div>
-
-            {/* Action Button */}
-            <Button variant="primary" className="w-full cursor-pointer">
-              Remind Me
-            </Button>
-          </div>
-        </div>
-      </section>
-
+      <ProductSection />
       <BannerSection />
 
       {/* ================= COME VISIT US SECTIONS ================= */}
