@@ -22,6 +22,7 @@ export default function ProductSection() {
             {/* Products Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full mt-4">
                 <ProductItem
+                    id="1"
                     image="mock_product_1.png"
                     name="Funki Mushroom Coffee"
                     price={60000}
@@ -30,6 +31,7 @@ export default function ProductSection() {
                     isBestSeller={true}
                 />
                 <ProductItem
+                    id="1"
                     image="mock_product_2.png"
                     name="Organic Chai Latte pack"
                     price={75000}
@@ -37,6 +39,7 @@ export default function ProductSection() {
                     stock={1000}
                 />
                 <ProductItem
+                    id="1"
                     image="mock_product_3.png"
                     name="Vanilla Hazelnut Brew pack"
                     price={70000}

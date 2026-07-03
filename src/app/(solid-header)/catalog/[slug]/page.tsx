@@ -29,6 +29,7 @@ export default function CatalogPage({ params }: PageProps) {
                     {Array.from({ length: 4 }).map((_, index) => (
                         <React.Fragment key={`row-${index}`}>
                             <ProductItem
+                                id="1"
                                 image="mock_product_1.png"
                                 name="Funki Mushroom Coffee"
                                 price={60000}
@@ -37,6 +38,7 @@ export default function CatalogPage({ params }: PageProps) {
                                 isBestSeller={true}
                             />
                             <ProductItem
+                                id="1"
                                 image="mock_product_2.png"
                                 name="Organic Chai Latte pack"
                                 price={75000}
@@ -44,6 +46,7 @@ export default function CatalogPage({ params }: PageProps) {
                                 stock={1000}
                             />
                             <ProductItem
+                                id="1"
                                 image="mock_product_3.png"
                                 name="Vanilla Hazelnut Brew pack"
                                 price={70000}

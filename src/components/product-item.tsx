@@ -3,8 +3,10 @@ import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { formatNumber } from "@/lib/utils";
 import { useMemo } from "react";
+import Link from "next/link";
 
 interface ProductItemProps {
+    id?: number | string;
     image: string;
     name: string;
     price: number;
@@ -13,7 +15,7 @@ interface ProductItemProps {
     isBestSeller?: boolean
 };
 
-const ProductItem = ({ image, name, price, discount, stock, isBestSeller = false }: ProductItemProps) => {
+const ProductItem = ({ id, image, name, price, discount, stock, isBestSeller = false }: ProductItemProps) => {
     const imageUrl = useMemo(() => {
         return `/images/mock/${image}`;
     }, [image]);
@@ -29,27 +31,29 @@ const ProductItem = ({ image, name, price, discount, stock, isBestSeller = false
     return (
         <div className="flex flex-col gap-4 group">
             {/* Product Image */}
-            <div className="relative w-full aspect-square rounded-[32px] overflow-hidden bg-gray-300">
-                <Image
-                    src={imageUrl}
-                    alt="Funki Mushroom Coffee pack"
-                    fill
-                    sizes="(max-width: 768px) 100vw"
-                    className="object-cover group-hover:scale-102 transition-transform duration-300"
-                />
-                {!!isBestSeller && (
-                    <Badge className="absolute top-4 left-4 bg-red text-white px-6.5 py-3">
-                        Best Seller
-                    </Badge>
-                )}
-                {stock <= 0 && (
-                    <div className="absolute h-[21%] top-1/2 -translate-y-1/2 left-0 right-0 bg-red/40 flex items-center justify-center">
-                        <span className="text-white text-2xl uppercase">
-                            Out of Stock
-                        </span>
-                    </div>
-                )}
-            </div>
+            <Link href={`/product/${id}`}>
+                <div className="relative w-full aspect-square rounded-[32px] overflow-hidden bg-gray-300">
+                    <Image
+                        src={imageUrl}
+                        alt="Funki Mushroom Coffee pack"
+                        fill
+                        sizes="(max-width: 768px) 100vw"
+                        className="object-cover group-hover:scale-102 transition-transform duration-300"
+                    />
+                    {!!isBestSeller && (
+                        <Badge className="absolute top-4 left-4 bg-red text-white px-6.5 py-3">
+                            Best Seller
+                        </Badge>
+                    )}
+                    {stock <= 0 && (
+                        <div className="absolute h-[21%] top-1/2 -translate-y-1/2 left-0 right-0 bg-red/40 flex items-center justify-center">
+                            <span className="text-white text-2xl uppercase">
+                                Out of Stock
+                            </span>
+                        </div>
+                    )}
+                </div>
+            </Link>
 
             {/* Product Information */}
             <div className="flex flex-col gap-2">
