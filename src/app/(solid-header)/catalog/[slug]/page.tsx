@@ -18,9 +18,9 @@ export default function CatalogPage({ params }: PageProps) {
                     <h2 className="font-heading capitalize text-5xl">{slug}</h2>
                     <Button variant="outline" className="group gap-2">
                         <svg className="text-gray-800 group-hover:text-white" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 7H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                            <path d="M3 12H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                            <path d="M3 17H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                            <path d="M3 7H21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                            <path d="M3 12H21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                            <path d="M3 17H21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                         </svg>
                         Filter
                     </Button>
