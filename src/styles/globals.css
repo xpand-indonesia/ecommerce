@@ -13,6 +13,7 @@
   --color-gray-bg: #F7F7F7;
   --color-footer-bg: #FAFAFA;
   --color-red: #F04438;
+  --color-red-500: #F04438;
   --font-heading: var(--font-areainktrap);
   --font-body: var(--font-lato);
 
@@ -27,7 +28,7 @@ html {
 
 body {
   background: var(--color-background);
-  color: var(--color-dark);
+  color: var(--color-black);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
