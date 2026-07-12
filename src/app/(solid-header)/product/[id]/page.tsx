@@ -2,29 +2,12 @@ import { Button } from "@/components/ui/button";
 import Container from "@/components/ui/container";
 import Image from "next/image";
 import BrewProcessSection from "./components/brew-process-section";
-import { ProductDetailFull } from "@/app/features/product-detail";
+import { ProductDetailSectionView } from "@/app/features/product-detail";
 
 export default function ProductDetailPage() {
     return (
-        <main className="mt-[75px] pt-10">
-            <section className="mb-10">
-                <Container className="px-6 md:px-10">
-                    <div className="flex divide-x divide-gray-300">
-                        <div className="w-[41%] pr-6">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div className="col-span-2 w-full aspect-square rounded-[32px] overflow-hidden bg-gray-200"></div>
-                                <div className="w-full aspect-square rounded-[32px] overflow-hidden bg-gray-200"></div>
-                                <div className="w-full aspect-square rounded-[32px] overflow-hidden bg-gray-200"></div>
-                                <div className="w-full aspect-square rounded-[32px] overflow-hidden bg-gray-200"></div>
-                                <div className="w-full aspect-square rounded-[32px] overflow-hidden bg-gray-200"></div>
-                            </div>
-                        </div>
-                        <div className="flex-1 h-[400px] pl-6">
-                            <ProductDetailFull />
-                        </div>
-                    </div>
-                </Container>
-            </section>
+        <main className="mt-[75px] pt-10 space-y-10">
+            <ProductDetailSectionView />
             <section className="bg-gray-100">
                 <Container>
                     <div className="flex px-4 gap-6">

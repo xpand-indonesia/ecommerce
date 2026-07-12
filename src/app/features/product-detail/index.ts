@@ -1,1 +1,1 @@
-export { ProductDetailFull } from './views/product-detail-full';
+export { ProductDetailSectionView } from './views/product-detail-section-view';
