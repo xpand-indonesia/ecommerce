@@ -1,0 +1,1 @@
+export { ProductDetailFull } from './views/product-detail-full';
