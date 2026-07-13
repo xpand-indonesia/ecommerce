@@ -24,3 +24,29 @@ export function formatNumber(
         maximumFractionDigits: decimalPlaces
     }).format(amount);
 }
+
+interface ParseNumberOptions {
+    locale?: string;
+}
+
+export function parseNumber(
+    formattedString: string,
+    options: ParseNumberOptions = {}
+): number {
+    const { locale = 'id-ID' } = options;
+
+    const formatter = new Intl.NumberFormat(locale);
+    const parts = formatter.formatToParts(1.1);
+    const decimalSeparator = parts.find(part => part.type === 'decimal')?.value || '.';
+
+    const regex = new RegExp(`[^0-9\\-${decimalSeparator}]`, 'g');
+    let cleanString = formattedString.replace(regex, '');
+
+    if (decimalSeparator !== '.') {
+        cleanString = cleanString.replace(decimalSeparator, '.');
+    }
+
+    const result = parseFloat(cleanString);
+
+    return isNaN(result) ? 0 : result;
+}
