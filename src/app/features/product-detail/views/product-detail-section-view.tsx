@@ -1,9 +1,10 @@
 import Container from "@/components/ui/container";
 import { Separator } from "@/components/ui/separator";
-import { ProductDetailPhotos } from "../components/product-detail-photos";
-import { ProductDetailDescription } from "../components/product-detail-description";
-import { ProductDetailSizeSelection } from "../components/product-detail-size-selection";
-import { ProductDetailGrindSelection } from "../components/product-detail-grind-selection";
+import { ProductDetailPhotos } from "../components/product-detail-section/product-detail-photos";
+import { ProductDetailDescription } from "../components/product-detail-section/product-detail-description";
+import { ProductDetailSizeSelection } from "../components/product-detail-section/product-detail-size-selection";
+import { ProductDetailGrindSelection } from "../components/product-detail-section/product-detail-grind-selection";
+import { ProductDetailCta } from "../components/product-detail-section/product-detail-cta";
 
 export const ProductDetailSectionView = () => {
 
@@ -22,6 +23,7 @@ export const ProductDetailSectionView = () => {
                             <Separator />
                             <ProductDetailGrindSelection />
                             <Separator />
+                            <ProductDetailCta />
                         </div>
                     </div>
                 </div>
