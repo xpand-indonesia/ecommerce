@@ -9,8 +9,8 @@ import {
 
 export default function ProductDetailPage() {
     return (
-        <main className="mt-[75px] pt-10">
-            <ProductDetailSectionView className="mb-10" />
+        <main className="pt-[75px]">
+            <ProductDetailSectionView />
             <ProductDetailBlendSectionView />
             <ProductDetailBrewProcessSectionView />
             <ProductDetailFAQSectionView />

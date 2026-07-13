@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils";
 import Container from "@/components/ui/container";
 import { Separator } from "@/components/ui/separator";
 import { ProductDetailPhotos } from "../components/product-detail-photos";
@@ -9,11 +8,11 @@ import { ProductDetailCta } from "../components/product-detail-cta";
 import { ProductDetailBundle } from "../components/product-detail-bundle";
 import { ProductDetailCofeeDetail } from "../components/product-detail-coffee-detail";
 
-export const ProductDetailSectionView = ({ className }: { className?: string }) => {
+export const ProductDetailSectionView = () => {
 
     return (
         <section>
-            <Container className={cn("px-6 md:px-10", className)}>
+            <Container className="px-6 md:px-10 py-10">
                 <div className="flex divide-x divide-gray-300">
                     <div className="w-[41%] pr-6">
                         <ProductDetailPhotos />
