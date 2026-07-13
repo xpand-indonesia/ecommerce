@@ -6,6 +6,7 @@ import { ProductDetailSizeSelection } from "../components/product-detail-section
 import { ProductDetailGrindSelection } from "../components/product-detail-section/product-detail-grind-selection";
 import { ProductDetailCta } from "../components/product-detail-section/product-detail-cta";
 import { ProductDetailBundle } from "../components/product-detail-section/product-detail-bundle";
+import { ProductDetailCofeeDetail } from "../components/product-detail-section/product-detail-coffee-detail";
 
 export const ProductDetailSectionView = () => {
 
@@ -26,6 +27,7 @@ export const ProductDetailSectionView = () => {
                             <Separator />
                             <ProductDetailCta />
                             <ProductDetailBundle />
+                            <ProductDetailCofeeDetail />
                         </div>
                     </div>
                 </div>

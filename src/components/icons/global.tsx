@@ -1,0 +1,50 @@
+import React from 'react';
+
+interface GlobalProps extends React.ComponentPropsWithoutRef<'svg'> {
+    className?: string;
+}
+
+export const Global: React.FC<GlobalProps> = ({ className, ...props }) => {
+    return (
+        <svg
+            width="1em"
+            height="1em"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className={className}
+            {...props}
+        >
+            <path
+                d="M8.00065 14.6668C11.6825 14.6668 14.6673 11.6821 14.6673 8.00016C14.6673 4.31826 11.6825 1.3335 8.00065 1.3335C4.31875 1.3335 1.33398 4.31826 1.33398 8.00016C1.33398 11.6821 4.31875 14.6668 8.00065 14.6668Z"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d="M5.33372 2L6.00039 2C4.70039 5.89333 4.70039 10.1067 6.00039 14H5.33372"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d="M10 2C11.3 5.89333 11.3 10.1067 10 14"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d="M2 10.6667V10C5.89333 11.3 10.1067 11.3 14 10V10.6667"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d="M2 5.9999C5.89333 4.6999 10.1067 4.6999 14 5.9999"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </svg>
+    );
+};
