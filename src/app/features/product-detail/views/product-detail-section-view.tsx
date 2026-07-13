@@ -5,6 +5,7 @@ import { ProductDetailDescription } from "../components/product-detail-section/p
 import { ProductDetailSizeSelection } from "../components/product-detail-section/product-detail-size-selection";
 import { ProductDetailGrindSelection } from "../components/product-detail-section/product-detail-grind-selection";
 import { ProductDetailCta } from "../components/product-detail-section/product-detail-cta";
+import { ProductDetailBundle } from "../components/product-detail-section/product-detail-bundle";
 
 export const ProductDetailSectionView = () => {
 
@@ -15,7 +16,7 @@ export const ProductDetailSectionView = () => {
                     <div className="w-[41%] pr-6">
                         <ProductDetailPhotos />
                     </div>
-                    <div className="flex-1 h-[400px] pl-6">
+                    <div className="flex-1 pl-6">
                         <div className="space-y-6">
                             <ProductDetailDescription />
                             <Separator />
@@ -24,6 +25,7 @@ export const ProductDetailSectionView = () => {
                             <ProductDetailGrindSelection />
                             <Separator />
                             <ProductDetailCta />
+                            <ProductDetailBundle />
                         </div>
                     </div>
                 </div>

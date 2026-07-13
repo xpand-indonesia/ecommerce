@@ -12,8 +12,8 @@ export const ProductDetailCta = () => {
     return (
         <div className="space-y-4">
             <div className="flex gap-4">
-                <InputCounter className="h-14 max-w-[200px]" value={quantity} onChange={setQuantity} />
-                <Button className="h-14 grow">
+                <InputCounter className="h-[56px] max-w-[200px]" value={quantity} onChange={setQuantity} />
+                <Button className="h-[56px] grow">
                     ADD TO CART • {formatNumber(60000)}
                 </Button>
             </div>

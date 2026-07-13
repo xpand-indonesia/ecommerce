@@ -35,17 +35,17 @@ export default function RegisterPage() {
                             <div className="flex gap-4">
                                 <div className="flex-1 flex flex-col gap-2">
                                     <Label>First Name</Label>
-                                    <Input type="text" placeholder="John" />
+                                    <Input type="text" placeholder="John" className="border-gray-200" />
                                 </div>
                                 <div className="flex-1 flex flex-col gap-2">
                                     <Label>Last Name</Label>
-                                    <Input type="text" placeholder="Doe" />
+                                    <Input type="text" placeholder="Doe" className="border-gray-200" />
                                 </div>
                             </div>
                             <div className="w-full">
                                 <div className="flex flex-col gap-2">
                                     <Label>Username</Label>
-                                    <Input type="text" placeholder="Enter username" />
+                                    <Input type="text" placeholder="Enter username" className="border-gray-200" />
                                     <span className="text-xs text-gray-500">
                                         Only lower case letter (a-z) and numbers (0-9) are allowed
                                     </span>
@@ -54,21 +54,21 @@ export default function RegisterPage() {
                             <div className="flex gap-4">
                                 <div className="flex-1 flex flex-col gap-2">
                                     <Label>Email Address</Label>
-                                    <Input type="text" placeholder="Enter Email Address" />
+                                    <Input type="text" placeholder="Enter Email Address" className="border-gray-200" />
                                 </div>
                                 <div className="flex-1 flex flex-col gap-2">
                                     <Label>Confirm Email</Label>
-                                    <Input type="text" placeholder="Re-Enter Email Address" />
+                                    <Input type="text" placeholder="Re-Enter Email Address" className="border-gray-200" />
                                 </div>
                             </div>
                             <div className="flex gap-4">
                                 <div className="flex-1 flex flex-col gap-2">
                                     <Label>Password</Label>
-                                    <Input type="text" placeholder="Enter Password" />
+                                    <Input type="text" placeholder="Enter Password" className="border-gray-200" />
                                 </div>
                                 <div className="flex-1 flex flex-col gap-2">
                                     <Label>Confirm Password</Label>
-                                    <Input type="text" placeholder="Re-Enter Password" />
+                                    <Input type="text" placeholder="Re-Enter Password" className="border-gray-200" />
                                 </div>
                             </div>
                             <Button

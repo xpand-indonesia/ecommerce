@@ -35,11 +35,11 @@ export default function SignInPage() {
                             <form className="flex flex-col gap-4">
                                 <div className="w-full flex flex-col gap-2">
                                     <Label>Username or Email Address</Label>
-                                    <Input type="text" placeholder="olivia@untitledui.com" />
+                                    <Input type="text" placeholder="olivia@untitledui.com" className="border-gray-200" />
                                 </div>
                                 <div className="w-full flex flex-col gap-2">
                                     <Label>Password</Label>
-                                    <Input type="password" placeholder="Enter Password" />
+                                    <Input type="password" placeholder="Enter Password" className="border-gray-200" />
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Checkbox id="remember-me" />
