@@ -21,12 +21,14 @@ const inputVariants = cva(
     },
 );
 
+type InputProps = Omit<React.ComponentProps<'input'>, 'size'> & VariantProps<typeof inputVariants>;
+
 function Input({
     className,
     type,
     size,
     ...props
-}: React.ComponentProps<'input'> & VariantProps<typeof inputVariants>) {
+}: InputProps) {
     return (
         <input
             data-slot="input"
