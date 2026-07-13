@@ -6,8 +6,8 @@ import { ProductDetailSectionView } from "@/app/features/product-detail";
 
 export default function ProductDetailPage() {
     return (
-        <main className="mt-[75px] pt-10 space-y-10">
-            <ProductDetailSectionView />
+        <main className="mt-[75px] pt-10">
+            <ProductDetailSectionView className="mb-10" />
             <section className="bg-gray-100">
                 <Container>
                     <div className="flex px-4 gap-6">
