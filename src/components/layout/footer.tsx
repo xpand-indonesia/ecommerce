@@ -18,7 +18,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-footer-bg text-dark border-t border-gray-light w-full">
+    <footer className="bg-footer-bg text-dark w-full">
       <div className="container mx-auto px-6 lg:px-9 lg:pt-[72px] lg:pb-6 flex flex-col gap-10">
         {/* Footer Top */}
         <div className="flex flex-col gap-8">
