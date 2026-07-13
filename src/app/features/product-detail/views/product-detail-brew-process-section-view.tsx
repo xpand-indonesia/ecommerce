@@ -1,7 +1,7 @@
 import { BrewProcessCard } from "@/components/brew-process-card";
 import Container from "@/components/ui/container";
 
-export default function BrewProcessSection() {
+export const ProductDetailBrewProcessSectionView = () => {
     return (
         <section className="bg-[linear-gradient(277.39deg,_#111E0B_5.08%,_#46B83D_107.32%)]">
             <Container className="pt-[84px] pb-[92px]">
