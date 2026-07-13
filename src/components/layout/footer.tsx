@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "../ui/button";
+import Container from "../ui/container";
 
 export function Footer() {
   const [email, setEmail] = useState("");
@@ -18,8 +19,8 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-footer-bg text-dark w-full">
-      <div className="container mx-auto px-6 lg:px-9 lg:pt-[72px] lg:pb-6 flex flex-col gap-10">
+    <footer className="bg-footer-bg text-dark w-full lg:pt-[72px] lg:pb-6">
+      <Container className="flex flex-col gap-10">
         {/* Footer Top */}
         <div className="flex flex-col gap-8">
           {/* Top Newsletter */}
@@ -259,7 +260,7 @@ export function Footer() {
             <span>ALL RIGHTS RESERVED 2026 FUNKI+ COFFEE</span>
           </div>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }
