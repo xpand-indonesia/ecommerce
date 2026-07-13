@@ -1,13 +1,13 @@
 import { cn } from "@/lib/utils";
 import Container from "@/components/ui/container";
 import { Separator } from "@/components/ui/separator";
-import { ProductDetailPhotos } from "../components/product-detail-section/product-detail-photos";
-import { ProductDetailDescription } from "../components/product-detail-section/product-detail-description";
-import { ProductDetailSizeSelection } from "../components/product-detail-section/product-detail-size-selection";
-import { ProductDetailGrindSelection } from "../components/product-detail-section/product-detail-grind-selection";
-import { ProductDetailCta } from "../components/product-detail-section/product-detail-cta";
-import { ProductDetailBundle } from "../components/product-detail-section/product-detail-bundle";
-import { ProductDetailCofeeDetail } from "../components/product-detail-section/product-detail-coffee-detail";
+import { ProductDetailPhotos } from "../components/product-detail-photos";
+import { ProductDetailDescription } from "../components/product-detail-description";
+import { ProductDetailSizeSelection } from "../components/product-detail-size-selection";
+import { ProductDetailGrindSelection } from "../components/product-detail-grind-selection";
+import { ProductDetailCta } from "../components/product-detail-cta";
+import { ProductDetailBundle } from "../components/product-detail-bundle";
+import { ProductDetailCofeeDetail } from "../components/product-detail-coffee-detail";
 
 export const ProductDetailSectionView = ({ className }: { className?: string }) => {
 

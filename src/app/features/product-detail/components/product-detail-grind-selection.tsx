@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { CircleInfo } from "@/components/icons";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/form/field/select";
-import { GRINDS } from "../../constants/product-grind-styles";
+import { GRINDS } from "../constants/product-grind-styles";
 
 export const ProductDetailGrindSelection = () => {
     const [grind, setGrind] = useState<string | null>("1");

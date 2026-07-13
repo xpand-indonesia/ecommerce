@@ -1,7 +1,10 @@
-import { ProductDetailSectionView } from "@/app/features/product-detail";
-import { ProductDetailBlendSectionView } from "@/app/features/product-detail/views/product-detail-blend-section-view";
-import { ProductDetailBrewProcessSectionView } from "@/app/features/product-detail/views/product-detail-brew-process-section-view";
-import { ProductDetailFAQSectionView } from "@/app/features/product-detail/views/product-detail-faq-section-view";
+import {
+    ProductDetailSectionView,
+    ProductDetailBlendSectionView,
+    ProductDetailBrewProcessSectionView,
+    ProductDetailFAQSectionView,
+    ProductDetailReviewSectionView
+} from "@/app/features/product-detail";
 
 export default function ProductDetailPage() {
     return (
@@ -10,6 +13,7 @@ export default function ProductDetailPage() {
             <ProductDetailBlendSectionView />
             <ProductDetailBrewProcessSectionView />
             <ProductDetailFAQSectionView />
+            <ProductDetailReviewSectionView />
         </main>
     );
 }
