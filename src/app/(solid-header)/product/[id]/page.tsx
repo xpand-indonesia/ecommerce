@@ -3,7 +3,8 @@ import {
     ProductDetailBlendSectionView,
     ProductDetailBrewProcessSectionView,
     ProductDetailFAQSectionView,
-    ProductDetailReviewSectionView
+    ProductDetailReviewSectionView,
+    ProductDetailRecommendationSectionView
 } from "@/app/features/product-detail";
 
 export default function ProductDetailPage() {
@@ -14,6 +15,7 @@ export default function ProductDetailPage() {
             <ProductDetailBrewProcessSectionView />
             <ProductDetailFAQSectionView />
             <ProductDetailReviewSectionView />
+            <ProductDetailRecommendationSectionView />
         </main>
     );
 }
