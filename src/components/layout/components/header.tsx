@@ -3,9 +3,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Container from "../ui/container";
+import Container from "@/components/ui/container";
 
-function Navbar({ transparent = false }: { transparent?: boolean }) {
+function Header({ transparent = false }: { transparent?: boolean }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
@@ -257,4 +257,4 @@ function Navbar({ transparent = false }: { transparent?: boolean }) {
   );
 }
 
-export { Navbar };
+export { Header };

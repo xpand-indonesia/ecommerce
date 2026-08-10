@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Button } from "../ui/button";
-import Container from "../ui/container";
+import { Button } from "@/components/ui/button";
+import Container from "@/components/ui/container";
 
 export function Footer() {
   const [email, setEmail] = useState("");

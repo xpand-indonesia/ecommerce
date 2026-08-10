@@ -1,5 +1,4 @@
-import { Footer } from "@/components/layout/footer";
-import { Navbar } from "@/components/layout/navbar";
+import { Header, Footer } from "@/components/layout";
 
 export default function TransparentHeaderLayout({
     children,
@@ -8,7 +7,7 @@ export default function TransparentHeaderLayout({
 }>) {
     return (
         <>
-            <Navbar />
+            <Header />
             {children}
             <Footer />
         </>
