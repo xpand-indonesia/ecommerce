@@ -9,7 +9,10 @@ import {
     BillingShippingForm,
     CheckoutSummary,
     SelectPaymentMethod,
+    SelectShippingMethod,
 } from '@/features/checkout';
+import { Checkbox } from '@/components/ui/form/field/checkbox';
+import { Label } from '@/components/ui/form/label';
 
 export default function CheckoutPage() {
     return (
@@ -37,6 +40,22 @@ export default function CheckoutPage() {
                                 Payment Method
                             </div>
                             <SelectPaymentMethod />
+                        </div>
+                        <div className="py-4 border-y border-gray-300 space-y-2">
+                            <div className="text-lg font-heading font-bold">
+                                Shipping Method
+                            </div>
+                            <SelectShippingMethod />
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <Checkbox id="agree" />
+                            <Label
+                                htmlFor="agree"
+                                className="text-sm font-medium text-gray-700 cursor-pointer"
+                            >
+                                I have read and agree to the website terms and
+                                conditions
+                            </Label>
                         </div>
                         <Link href="#">
                             <Button className="w-full">
