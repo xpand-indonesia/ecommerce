@@ -8,7 +8,7 @@ export default function SignInPage() {
     return (
         <>
             <HeaderProp style="default" />
-            <section className="py-8 mt-[75px]">
+            <section className="py-8 header-safe">
                 <Container>
                     <div className="flex gap-6">
                         <div className="flex-1">
@@ -29,18 +29,24 @@ export default function SignInPage() {
                             </div>
                         </div>
                         <div className="flex-1">
-                            <div className=" flex flex-col gap-8">
+                            <div className=" flex flex-col gap-8 mb-2">
                                 <h2 className="font-heading font-bold text-3xl md:text-4xl text-dark leading-tight text-center">
                                     Login
                                 </h2>
                                 <LoginForm />
                             </div>
-                            <div className="border-b border-[#D5D7DA] font-medium w-full my-4"></div>
-                            <div>
+                            <Link
+                                href="/auth/login"
+                                className="text-primary text-sm font-medium"
+                            >
+                                Forgot Password?
+                            </Link>
+                            <div className="border-b border-[#D5D7DA] w-full my-4"></div>
+                            <div className="text-sm">
                                 Don't have an account?{' '}
                                 <Link
                                     href="/auth/register"
-                                    className="text-primary"
+                                    className="text-primary underline font-medium"
                                 >
                                     Register Now
                                 </Link>

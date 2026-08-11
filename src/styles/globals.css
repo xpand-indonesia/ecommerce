@@ -1,8 +1,11 @@
 @import 'tailwindcss';
 
 @theme {
-    --color-primary: #003813;
-    --color-primary-hover: #004d1a;
+    --font-heading: var(--font-areainktrap);
+    --font-body: var(--font-lato);
+
+    --header-height: 75px;
+
     --color-dark: #252b37;
     --color-gray: #717680;
     --color-gray-50: #fafafa;
@@ -20,8 +23,8 @@
     --color-red: #f04438;
     --color-red-500: #f04438;
 
-    --font-heading: var(--font-areainktrap);
-    --font-body: var(--font-lato);
+    --color-primary: #003813;
+    --color-primary-hover: #004d1a;
 
     --color-background: var(--color-white);
     --color-input: var(--color-gray-300);
@@ -31,6 +34,10 @@
     @media (min-width: 90rem) {
         max-width: 90rem;
     }
+}
+
+@utility header-safe {
+    margin-top: theme(--header-height);
 }
 
 html {

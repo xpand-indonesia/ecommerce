@@ -14,7 +14,7 @@ export function Header() {
     return (
         <HeaderWrapper>
             <Container>
-                <nav className="flex items-center justify-between h-[75px]">
+                <nav className="flex items-center justify-between h-[var(--header-height)]">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2 shrink-0">
                         <Image
