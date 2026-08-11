@@ -1,15 +1,15 @@
 'use client';
 
-import { cn, formatNumber, parseNumber } from "@/lib/utils";
-import { cva, type VariantProps } from "class-variance-authority";
-import { Input } from "./input";
-import { Minus, Plus } from "@/components/icons";
+import { cn, formatNumber, parseNumber } from '@/lib/utils';
+import { cva, type VariantProps } from 'class-variance-authority';
+import { Input } from './input';
+import { Minus, Plus } from '@/components/icons';
 
 const inputVariants = cva(
     `
         px-14
         text-center
-    `,
+    `
 );
 
 interface InputProps {
@@ -17,9 +17,12 @@ interface InputProps {
     value?: number | undefined;
     onChange?: (value: number | undefined) => void;
     min?: number;
-};
+}
 
-type InputCounterProps = Omit<React.ComponentProps<'input'>, 'size' | 'value' | 'onChange'> &
+type InputCounterProps = Omit<
+    React.ComponentProps<'input'>,
+    'size' | 'value' | 'onChange'
+> &
     InputProps &
     VariantProps<typeof inputVariants>;
 
@@ -81,8 +84,8 @@ function InputCounter({
             <div
                 onClick={decrease}
                 className={cn(
-                    "h-full absolute start-0 top-1/2 -translate-y-1/2 flex items-center justify-center px-4 rounded-full",
-                    reachMin ? "text-gray-500" : "cursor-pointer text-gray-800"
+                    'h-full absolute start-0 top-1/2 -translate-y-1/2 flex items-center justify-center px-4 rounded-full',
+                    reachMin ? 'text-gray-500' : 'cursor-pointer text-gray-800'
                 )}
             >
                 <Minus className="size-6" />
@@ -100,8 +103,8 @@ function InputCounter({
             <div
                 onClick={increase}
                 className={cn(
-                    "h-full absolute end-0 top-1/2 -translate-y-1/2 flex items-center justify-center px-4 rounded-full",
-                    "cursor-pointer text-gray-800"
+                    'h-full absolute end-0 top-1/2 -translate-y-1/2 flex items-center justify-center px-4 rounded-full',
+                    'cursor-pointer text-gray-800'
                 )}
             >
                 <Plus className="size-6" />
@@ -110,6 +113,4 @@ function InputCounter({
     );
 }
 
-export {
-    InputCounter
-};
+export { InputCounter };
