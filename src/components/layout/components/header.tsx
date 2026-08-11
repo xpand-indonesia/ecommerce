@@ -13,7 +13,7 @@ function Header() {
 
     return (
         <header
-            className={`absolute top-0 left-0 right-0 z-50 border-b border-gray-200 ${transparent ? '' : 'bg-white'}`}
+            className={`absolute top-0 left-0 right-0 z-50 border-b ${transparent ? 'border-white/20' : 'bg-white border-gray-200'}`}
         >
             <Container>
                 <nav className="flex items-center justify-between h-[75px]">
@@ -37,25 +37,25 @@ function Header() {
                     <div className="hidden md:flex items-center gap-8">
                         <Link
                             href="/catalog/coffee"
-                            className={`text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
+                            className={`font-heading text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
                         >
                             Coffee+
                         </Link>
                         <Link
                             href="/catalog/tea"
-                            className={`text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
+                            className={`font-heading text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
                         >
                             Tea+
                         </Link>
                         <Link
                             href="/catalog/chocolate"
-                            className={`text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
+                            className={`font-heading text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
                         >
                             Chocolate+
                         </Link>
                         <Link
                             href="#"
-                            className={`text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
+                            className={`font-heading text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
                         >
                             Support
                         </Link>

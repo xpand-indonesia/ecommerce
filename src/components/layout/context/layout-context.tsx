@@ -12,7 +12,7 @@ interface LayoutContextType {
 const LayoutContext = createContext<LayoutContextType | undefined>(undefined);
 
 export function LayoutProvider({ children }: { children: React.ReactNode }) {
-    const [headerStyle, setHeaderStyle] = useState<HeaderStyle>('default');
+    const [headerStyle, setHeaderStyle] = useState<HeaderStyle>('transparent');
 
     return (
         <LayoutContext.Provider value={{ headerStyle, setHeaderStyle }}>
