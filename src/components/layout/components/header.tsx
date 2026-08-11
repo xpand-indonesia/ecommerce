@@ -6,13 +6,14 @@ import Image from 'next/image';
 import Container from '@/components/ui/container';
 import { useLayout } from '@/components/layout/context/layout-context';
 
-function Header({ transparent = false }: { transparent?: boolean }) {
+function Header() {
     const { headerStyle } = useLayout();
+    const transparent = headerStyle === 'transparent';
     const [mobileOpen, setMobileOpen] = useState(false);
 
     return (
         <header
-            className={`absolute top-0 left-0 right-0 z-50 border-b border-gray-200 ${headerStyle == 'transparent' ? '' : 'bg-white'}`}
+            className={`absolute top-0 left-0 right-0 z-50 border-b border-gray-200 ${transparent ? '' : 'bg-white'}`}
         >
             <Container>
                 <nav className="flex items-center justify-between h-[75px]">
@@ -20,7 +21,7 @@ function Header({ transparent = false }: { transparent?: boolean }) {
                     <Link href="/" className="flex items-center gap-2 shrink-0">
                         <Image
                             src={
-                                headerStyle == 'transparent'
+                                transparent
                                     ? '/images/mock/mock_logo_white.png'
                                     : '/images/mock/mock_logo.png'
                             }
@@ -36,25 +37,25 @@ function Header({ transparent = false }: { transparent?: boolean }) {
                     <div className="hidden md:flex items-center gap-8">
                         <Link
                             href="/catalog/coffee"
-                            className={`text-base transition-colors ${headerStyle == 'transparent' ? 'text-white hover:text-white/80' : 'hover:primary'}`}
+                            className={`text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
                         >
                             Coffee+
                         </Link>
                         <Link
                             href="/catalog/tea"
-                            className={`text-base transition-colors ${headerStyle == 'transparent' ? 'text-white hover:text-white/80' : 'hover:primary'}`}
+                            className={`text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
                         >
                             Tea+
                         </Link>
                         <Link
                             href="/catalog/chocolate"
-                            className={`text-base transition-colors ${headerStyle == 'transparent' ? 'text-white hover:text-white/80' : 'hover:primary'}`}
+                            className={`text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
                         >
                             Chocolate+
                         </Link>
                         <Link
                             href="#"
-                            className={`text-base transition-colors ${headerStyle == 'transparent' ? 'text-white hover:text-white/80' : 'hover:primary'}`}
+                            className={`text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
                         >
                             Support
                         </Link>
@@ -67,7 +68,7 @@ function Header({ transparent = false }: { transparent?: boolean }) {
                             <button
                                 type="button"
                                 aria-label="User account"
-                                className={`transition-colors cursor-pointer ${headerStyle == 'transparent' ? 'text-white hover:text-white/80' : 'hover:primary'}`}
+                                className={`transition-colors cursor-pointer ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
                             >
                                 <svg
                                     width="24"
@@ -88,7 +89,7 @@ function Header({ transparent = false }: { transparent?: boolean }) {
                         <button
                             type="button"
                             aria-label="Shopping cart"
-                            className={`transition-colors cursor-pointer ${headerStyle == 'transparent' ? 'text-white hover:text-white/80' : 'hover:primary'}`}
+                            className={`transition-colors cursor-pointer ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
                         >
                             <svg
                                 width="24"
@@ -109,7 +110,7 @@ function Header({ transparent = false }: { transparent?: boolean }) {
                         <button
                             type="button"
                             aria-label="Search"
-                            className={`transition-colors cursor-pointer ${headerStyle == 'transparent' ? 'text-white hover:text-white/80' : 'hover:primary'}`}
+                            className={`transition-colors cursor-pointer ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
                         >
                             <svg
                                 width="24"
