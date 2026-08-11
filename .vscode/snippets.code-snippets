@@ -1,0 +1,8 @@
+{
+    "TypeScript Re-Export": {
+        "scope": "typescript",
+        "prefix": "expf",
+        "body": ["export {$2} from './$1'", "$0"],
+        "description": "Re-export a module or component from a relative path",
+    },
+}
