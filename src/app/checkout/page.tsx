@@ -57,7 +57,7 @@ export default function CheckoutPage() {
                                 conditions
                             </Label>
                         </div>
-                        <Link href="#">
+                        <Link href="/orders">
                             <Button className="w-full">
                                 Pay Now -{' '}
                                 {formatNumber(147000, { currency: 'IDR' })}
