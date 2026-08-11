@@ -15,6 +15,7 @@
     --color-gray-500: #717680;
     --color-gray-700: #414651;
     --color-gray-800: #252b37;
+    --color-green-500: #12b76a;
     --color-gray-light: #d5d7da;
     --color-gray-bg: #f7f7f7;
     --color-base-100: #44c36f;
@@ -25,6 +26,7 @@
 
     --color-primary: #003813;
     --color-primary-hover: #004d1a;
+    --color-success: var(--color-green-500);
 
     --color-background: var(--color-white);
     --color-input: var(--color-gray-300);

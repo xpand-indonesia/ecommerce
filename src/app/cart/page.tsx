@@ -98,7 +98,7 @@ export default function CartPage() {
                             <ApplyCouponForm />
                             <CartSummary />
                         </div>
-                        <Link href="#">
+                        <Link href="/checkout">
                             <Button className="w-full">
                                 Proceed to Checkout
                             </Button>
