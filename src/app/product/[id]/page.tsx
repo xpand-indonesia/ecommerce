@@ -4,8 +4,8 @@ import {
     ProductDetailBrewProcessSectionView,
     ProductDetailFAQSectionView,
     ProductDetailReviewSectionView,
-    ProductDetailRecommendationSectionView
-} from "@/app/features/product-detail";
+    ProductDetailRecommendationSectionView,
+} from '@/features/product-detail';
 
 export default function ProductDetailPage() {
     return (
