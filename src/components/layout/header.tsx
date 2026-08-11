@@ -4,32 +4,33 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Container from '@/components/ui/container';
-import { useLayout } from '@/components/layout/context/layout-context';
+import { HeaderWrapper } from './components/header-wrapper';
+import { cn } from '@/lib/utils';
 
 function Header() {
-    const { headerStyle } = useLayout();
-    const transparent = headerStyle === 'transparent';
     const [mobileOpen, setMobileOpen] = useState(false);
 
     return (
-        <header
-            className={`absolute top-0 left-0 right-0 z-50 border-b ${transparent ? 'border-white/20' : 'bg-white border-gray-200'}`}
-        >
+        <HeaderWrapper>
             <Container>
                 <nav className="flex items-center justify-between h-[75px]">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2 shrink-0">
                         <Image
-                            src={
-                                transparent
-                                    ? '/images/mock/mock_logo_white.png'
-                                    : '/images/mock/mock_logo.png'
-                            }
+                            src="/images/mock/mock_logo_white.png"
                             alt="Logo"
                             width={0}
                             height={43}
                             sizes="100vw"
-                            className="w-auto h-[43px]"
+                            className="w-auto h-[43px] group-[.default]:hidden"
+                        />
+                        <Image
+                            src="/images/mock/mock_logo.png"
+                            alt="Logo"
+                            width={0}
+                            height={43}
+                            sizes="100vw"
+                            className="w-auto h-[43px] group-[.transparent]:hidden"
                         />
                     </Link>
 
@@ -37,25 +38,41 @@ function Header() {
                     <div className="hidden md:flex items-center gap-8">
                         <Link
                             href="/catalog/coffee"
-                            className={`font-heading text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
+                            className={cn(
+                                'font-heading text-base transition-colors',
+                                'group-[.transparent]:text-white group-[.transparent]:hover:text-white/80',
+                                'group-[.default]:hover:primary'
+                            )}
                         >
                             Coffee+
                         </Link>
                         <Link
                             href="/catalog/tea"
-                            className={`font-heading text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
+                            className={cn(
+                                'font-heading text-base transition-colors',
+                                'group-[.transparent]:text-white group-[.transparent]:hover:text-white/80',
+                                'group-[.default]:hover:primary'
+                            )}
                         >
                             Tea+
                         </Link>
                         <Link
                             href="/catalog/chocolate"
-                            className={`font-heading text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
+                            className={cn(
+                                'font-heading text-base transition-colors',
+                                'group-[.transparent]:text-white group-[.transparent]:hover:text-white/80',
+                                'group-[.default]:hover:primary'
+                            )}
                         >
                             Chocolate+
                         </Link>
                         <Link
                             href="#"
-                            className={`font-heading text-base transition-colors ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
+                            className={cn(
+                                'font-heading text-base transition-colors',
+                                'group-[.transparent]:text-white group-[.transparent]:hover:text-white/80',
+                                'group-[.default]:hover:primary'
+                            )}
                         >
                             Support
                         </Link>
@@ -68,7 +85,11 @@ function Header() {
                             <button
                                 type="button"
                                 aria-label="User account"
-                                className={`transition-colors cursor-pointer ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
+                                className={cn(
+                                    'transition-colors cursor-pointer',
+                                    'group-[.transparent]:text-white hover:text-white/80',
+                                    'group-[.default]:hover:primary'
+                                )}
                             >
                                 <svg
                                     width="24"
@@ -89,7 +110,11 @@ function Header() {
                         <button
                             type="button"
                             aria-label="Shopping cart"
-                            className={`transition-colors cursor-pointer ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
+                            className={cn(
+                                'transition-colors cursor-pointer',
+                                'group-[.transparent]:text-white hover:text-white/80',
+                                'group-[.default]:hover:primary'
+                            )}
                         >
                             <svg
                                 width="24"
@@ -110,7 +135,11 @@ function Header() {
                         <button
                             type="button"
                             aria-label="Search"
-                            className={`transition-colors cursor-pointer ${transparent ? 'text-white hover:text-white/80' : 'hover:primary'}`}
+                            className={cn(
+                                'transition-colors cursor-pointer',
+                                'group-[.transparent]:text-white hover:text-white/80',
+                                'group-[.default]:hover:primary'
+                            )}
                         >
                             <svg
                                 width="24"
@@ -265,7 +294,7 @@ function Header() {
                     </div>
                 </div>
             </div>
-        </header>
+        </HeaderWrapper>
     );
 }
 

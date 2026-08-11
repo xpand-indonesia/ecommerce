@@ -1,15 +1,15 @@
 'use client';
 
-import { Button } from "@/components/ui/button";
-import Container from "@/components/ui/container";
-import { Checkbox } from "@/components/ui/form/field/checkbox";
-import { Input } from "@/components/ui/form/field/input";
-import { Label } from "@/components/ui/form/label";
-import Image from "next/image";
-import Link from "next/link";
+import { Button } from '@/components/ui/button';
+import Container from '@/components/ui/container';
+import { Checkbox } from '@/components/ui/form/field/checkbox';
+import { Input } from '@/components/ui/form/field/input';
+import { Label } from '@/components/ui/form/label';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function SignInPage() {
-    const submit = () => { }
+    const submit = () => {};
 
     return (
         <main className="flex-1 w-full pt-[75px]">
@@ -27,25 +27,42 @@ export default function SignInPage() {
                                     />
                                 </div>
                                 <div className="relative w-full h-full flex items-center justify-center z-10">
-                                    <p className="text-[32px] md:text-[60px] text-white font-heading font-bold leading-tight text-center">/Enjoy Cofee/</p>
+                                    <p className="text-[32px] md:text-[60px] text-white font-heading font-bold leading-tight text-center">
+                                        /Enjoy Cofee/
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <div className="flex-1">
                             <div className=" flex flex-col gap-8">
-                                <h2 className="font-heading font-bold text-3xl md:text-4xl text-dark leading-tight text-center">Login</h2>
+                                <h2 className="font-heading font-bold text-3xl md:text-4xl text-dark leading-tight text-center">
+                                    Login
+                                </h2>
                                 <form className="flex flex-col gap-4">
                                     <div className="w-full flex flex-col gap-2">
                                         <Label>Username or Email Address</Label>
-                                        <Input type="text" placeholder="olivia@untitledui.com" className="border-gray-200" />
+                                        <Input
+                                            type="text"
+                                            placeholder="olivia@untitledui.com"
+                                            className="border-gray-200"
+                                        />
                                     </div>
                                     <div className="w-full flex flex-col gap-2">
                                         <Label>Password</Label>
-                                        <Input type="password" placeholder="Enter Password" className="border-gray-200" />
+                                        <Input
+                                            type="password"
+                                            placeholder="Enter Password"
+                                            className="border-gray-200"
+                                        />
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <Checkbox id="remember-me" />
-                                        <Label htmlFor="remember-me" className="cursor-pointer">Remember Me</Label>
+                                        <Label
+                                            htmlFor="remember-me"
+                                            className="cursor-pointer"
+                                        >
+                                            Remember Me
+                                        </Label>
                                     </div>
                                     <Button
                                         variant="primary"
@@ -58,7 +75,13 @@ export default function SignInPage() {
                             </div>
                             <div className="border-b border-[#D5D7DA] font-medium w-full my-4"></div>
                             <div>
-                                Don't have an account? <Link href="/auth/register" className="text-primary">Register Now</Link>
+                                Don't have an account?{' '}
+                                <Link
+                                    href="/auth/register"
+                                    className="text-primary"
+                                >
+                                    Register Now
+                                </Link>
                             </div>
                         </div>
                     </div>
