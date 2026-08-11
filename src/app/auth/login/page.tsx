@@ -1,19 +1,14 @@
-'use client';
-
-import { Button } from '@/components/ui/button';
+import { HeaderProp } from '@/components/layout';
 import Container from '@/components/ui/container';
-import { Checkbox } from '@/components/ui/form/field/checkbox';
-import { Input } from '@/components/ui/form/field/input';
-import { Label } from '@/components/ui/form/label';
+import { LoginForm } from '@/features/auth';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function SignInPage() {
-    const submit = () => {};
-
     return (
-        <main className="flex-1 w-full pt-[75px]">
-            <section className="py-8">
+        <>
+            <HeaderProp style="default" />
+            <section className="py-8 mt-[75px]">
                 <Container>
                     <div className="flex gap-6">
                         <div className="flex-1">
@@ -38,40 +33,7 @@ export default function SignInPage() {
                                 <h2 className="font-heading font-bold text-3xl md:text-4xl text-dark leading-tight text-center">
                                     Login
                                 </h2>
-                                <form className="flex flex-col gap-4">
-                                    <div className="w-full flex flex-col gap-2">
-                                        <Label>Username or Email Address</Label>
-                                        <Input
-                                            type="text"
-                                            placeholder="olivia@untitledui.com"
-                                            className="border-gray-200"
-                                        />
-                                    </div>
-                                    <div className="w-full flex flex-col gap-2">
-                                        <Label>Password</Label>
-                                        <Input
-                                            type="password"
-                                            placeholder="Enter Password"
-                                            className="border-gray-200"
-                                        />
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <Checkbox id="remember-me" />
-                                        <Label
-                                            htmlFor="remember-me"
-                                            className="cursor-pointer"
-                                        >
-                                            Remember Me
-                                        </Label>
-                                    </div>
-                                    <Button
-                                        variant="primary"
-                                        className="mt-2 h-[51px] px-8 cursor-pointer font-semibold shadow-lg shadow-black/20"
-                                        onClick={submit}
-                                    >
-                                        Login
-                                    </Button>
-                                </form>
+                                <LoginForm />
                             </div>
                             <div className="border-b border-[#D5D7DA] font-medium w-full my-4"></div>
                             <div>
@@ -87,6 +49,6 @@ export default function SignInPage() {
                     </div>
                 </Container>
             </section>
-        </main>
+        </>
     );
 }

@@ -42,10 +42,10 @@ export default function RootLayout({
             lang="en"
             className={`${lato.variable} ${areaInktrap.variable} antialiased`}
         >
-            <body className="min-h-full flex flex-col">
+            <body className="min-h-full">
                 <LayoutProvider>
                     <Header />
-                    {children}
+                    <main>{children}</main>
                     <Footer />
                 </LayoutProvider>
             </body>

@@ -1,13 +1,14 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { cn } from '@/lib/utils';
 import Container from '@/components/ui/container';
 import { HeaderWrapper } from './components/header-wrapper';
-import { cn } from '@/lib/utils';
+import { HeaderStyle, useLayout } from './context/layout-context';
 
-function Header() {
+export function Header() {
     const [mobileOpen, setMobileOpen] = useState(false);
 
     return (
@@ -298,4 +299,16 @@ function Header() {
     );
 }
 
-export { Header };
+interface HeaderPropProps {
+    style?: HeaderStyle;
+}
+
+export function HeaderProp({ style = 'transparent' }: HeaderPropProps) {
+    const { setHeaderStyle } = useLayout();
+
+    useEffect(() => {
+        setHeaderStyle(style);
+    }, [style]);
+
+    return null;
+}

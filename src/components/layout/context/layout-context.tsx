@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState } from 'react';
 
-type HeaderStyle = 'default' | 'transparent';
+export type HeaderStyle = 'default' | 'transparent';
 
 interface LayoutContextType {
     headerStyle: HeaderStyle;

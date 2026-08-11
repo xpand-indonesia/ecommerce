@@ -1,26 +1,16 @@
 'use client';
 
-import { useEffect } from 'react';
 import Image from 'next/image';
-import { useLayout } from '@/components/layout';
+import { HeaderProp } from '@/components/layout';
 import { Button } from '@/components/ui/button';
 import HeroSection from './components/hero-section';
 import BannerSection from './components/banner-section';
 import ProductSection from './components/product-section';
 
 export default function LandingPage() {
-    const { setHeaderStyle } = useLayout();
-
-    useEffect(() => {
-        setHeaderStyle('transparent');
-
-        return () => {
-            setHeaderStyle('default');
-        };
-    }, [setHeaderStyle]);
-
     return (
-        <main className="flex-1 w-full flex flex-col">
+        <>
+            <HeaderProp style="transparent" />
             <HeroSection />
             <ProductSection />
             <BannerSection />
@@ -267,6 +257,6 @@ export default function LandingPage() {
                     </div>
                 </div>
             </section>
-        </main>
+        </>
     );
 }
