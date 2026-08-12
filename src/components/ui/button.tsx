@@ -15,7 +15,7 @@ function Button({
     ...props
 }: ButtonProps) {
     const base =
-        'inline-flex items-center justify-center rounded-full font-body text-base leading-[19px] cursor-pointer transition-all duration-200 ease-in-out';
+        'inline-flex items-center justify-center rounded-full font-body text-base cursor-pointer transition-all duration-200 ease-in-out';
 
     const variants: Record<string, string> = {
         primary:
