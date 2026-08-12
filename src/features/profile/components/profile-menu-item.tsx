@@ -2,13 +2,15 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { ReactNode } from 'react';
 
 interface ProfileMenuItemProps {
+    icon: ReactNode;
     href: string;
     title: string;
 }
 
-export function ProfileMenuItem({ href, title }: ProfileMenuItemProps) {
+export function ProfileMenuItem({ icon, href, title }: ProfileMenuItemProps) {
     const pathname = usePathname();
     const isActive = pathname === href;
 
@@ -19,6 +21,7 @@ export function ProfileMenuItem({ href, title }: ProfileMenuItemProps) {
                 isActive ? 'text-primary' : 'text-gray-500 hover:text-gray-800'
             }`}
         >
+            {icon}
             {title}
         </Link>
     );

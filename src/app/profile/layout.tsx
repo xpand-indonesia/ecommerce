@@ -21,6 +21,7 @@ export default function ProfileLayout({
                                     <ProfileMenuItem
                                         title={menu.title}
                                         href={menu.href}
+                                        icon={menu.icon}
                                     />
                                 </li>
                             ))}
