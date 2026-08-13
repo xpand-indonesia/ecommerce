@@ -1,10 +1,10 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { cn } from '@/lib/utils';
 import Container from '@/components/ui/container';
+import { cn } from '@/lib/utils';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { HeaderWrapper } from './components/header-wrapper';
 import { HeaderStyle, useLayout } from './context/layout-context';
 
@@ -82,7 +82,7 @@ export function Header() {
                     {/* Desktop Icons */}
                     <div className="hidden md:flex items-center gap-8">
                         {/* User Icon */}
-                        <Link href="/auth/login">
+                        <Link href="/profile">
                             <button
                                 type="button"
                                 aria-label="User account"
