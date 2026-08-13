@@ -7,6 +7,7 @@
     "editor.formatOnSave": true,
     "editor.tabSize": 4,
     "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit",
         "source.fixAll.eslint": "explicit"
     },
     "prettier.tabWidth": 4,
@@ -24,6 +25,15 @@
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+
+    // Advanced Professional Enhancements
+    "js/ts.updateImportsOnFileMove.enabled": "always",
+    "editor.stickyScroll.enabled": true,
+    "editor.suggestSelection": "first",
+    "js/ts.suggest.completeFunctionCalls": true,
+    "js/ts.inlayHints.parameterNames.enabled": "all",
+    "js/ts.inlayHints.parameterTypes.enabled": false,
+    "js/ts.inlayHints.variableTypes.enabled": false,
 
     // File Exclusions for Search & Cursor AI Indexing
     "files.exclude": {
