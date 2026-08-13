@@ -5,4 +5,22 @@
         "body": ["export {$2} from './$1'", "$0"],
         "description": "Re-export a module or component from a relative path",
     },
+    "Create React Icon Component": {
+        "scope": "typescript,typescriptreact",
+        "prefix": "svgi",
+        "body": [
+            "import React from 'react';",
+            "",
+            "interface ${1}Props extends React.ComponentPropsWithoutRef<'svg'> {",
+            "    className?: string;",
+            "}",
+            "",
+            "export const ${1}: React.FC<${1}Props> = ({ className, ...props }) => (",
+            "    <svg width=\"1em\" height=\"1em\" viewBox=\"0 0 $3 $3\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" className={className} {...props}>",
+            "        $2",
+            "    </svg>$0",
+            ");",
+        ],
+        "description": "Generates a reusable TypeScript React SVG icon component supporting standard SVG props and Tailwind/CSS classes.",
+    },
 }
