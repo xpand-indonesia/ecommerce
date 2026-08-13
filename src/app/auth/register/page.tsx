@@ -13,10 +13,10 @@ export default function RegisterPage() {
     return (
         <>
             <HeaderProp style="default" />
-            <section className="header-safe-8 py-8">
+            <section className="py-6 header-safe-6 lg:py-8 lg:header-safe-8">
                 <Container>
                     <div className="flex gap-6">
-                        <div className="flex-1">
+                        <div className="flex-1 hidden lg:block">
                             <div className="relative rounded-[32px] h-[656px] w-full overflow-hidden">
                                 <div className="absolute top-0 left-0 w-full h-full">
                                     <Image
@@ -38,7 +38,7 @@ export default function RegisterPage() {
                                 Register
                             </h2>
                             <form className="flex flex-col gap-4">
-                                <div className="flex gap-4">
+                                <div className="flex flex-col lg:flex-row gap-4">
                                     <div className="flex-1 flex flex-col gap-2">
                                         <Label>First Name</Label>
                                         <Input
@@ -70,7 +70,7 @@ export default function RegisterPage() {
                                         </span>
                                     </div>
                                 </div>
-                                <div className="flex gap-4">
+                                <div className="flex flex-col lg:flex-row gap-4">
                                     <div className="flex-1 flex flex-col gap-2">
                                         <Label>Email Address</Label>
                                         <Input
@@ -88,7 +88,7 @@ export default function RegisterPage() {
                                         />
                                     </div>
                                 </div>
-                                <div className="flex gap-4">
+                                <div className="flex flex-col lg:flex-row gap-4">
                                     <div className="flex-1 flex flex-col gap-2">
                                         <Label>Password</Label>
                                         <Input
