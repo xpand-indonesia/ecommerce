@@ -32,14 +32,14 @@ export const Bag2: React.FC<Bag2Props> = ({ className, ...props }) => (
         />
         <path
             d="M15.4955 12H15.5045"
-            stroke="#252B37"
+            stroke="currentColor"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
         />
         <path
             d="M8.49451 12H8.50349"
-            stroke="#252B37"
+            stroke="currentColor"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"

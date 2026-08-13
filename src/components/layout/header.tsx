@@ -1,5 +1,8 @@
 'use client';
 
+import { Bag2 } from '@/components/icons/bag2';
+import { Menu } from '@/components/icons/menu';
+import { Search } from '@/components/icons/search';
 import { User } from '@/components/icons/user';
 import Container from '@/components/ui/container';
 import { CartSheet } from '@/features/cart';
@@ -7,8 +10,6 @@ import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { Bag2 } from '../icons/bag2';
-import { Search } from '../icons/search';
 import { HeaderMenuItem } from './components/header-menu-item';
 import { HeaderWrapper } from './components/header-wrapper';
 import { HeaderStyle, useLayout } from './context/layout-context';
@@ -34,7 +35,6 @@ export function Header() {
             <HeaderWrapper>
                 <Container>
                     <nav className="flex items-center justify-between h-[var(--header-height)]">
-                        {/* Logo */}
                         <Link
                             href="/"
                             className="flex items-center gap-2 shrink-0"
@@ -56,9 +56,7 @@ export function Header() {
                                 className="w-auto h-[43px] group-[.transparent]:hidden"
                             />
                         </Link>
-
-                        {/* Desktop Navigation */}
-                        <div className="hidden md:flex items-center gap-8">
+                        <div className="hidden lg:flex items-center gap-8">
                             {MENUS.map((menu, index) => (
                                 <HeaderMenuItem
                                     key={`header-menu-${index}`}
@@ -66,11 +64,11 @@ export function Header() {
                                 />
                             ))}
                         </div>
-
-                        {/* Desktop Icons */}
-                        <div className="hidden md:flex items-center gap-8">
-                            {/* User Icon */}
-                            <Link href="/profile">
+                        <div className="flex items-center gap-2 lg:gap-8">
+                            <Link
+                                href="/profile"
+                                className="hidden lg:inline-flex"
+                            >
                                 <button
                                     type="button"
                                     aria-label="User account"
@@ -83,7 +81,6 @@ export function Header() {
                                     <User className="size-6" />
                                 </button>
                             </Link>
-                            {/* Cart Icon */}
                             <button
                                 type="button"
                                 aria-label="Shopping cart"
@@ -96,58 +93,48 @@ export function Header() {
                             >
                                 <Bag2 className="size-6" />
                             </button>
-                            {/* Search Icon */}
                             <button
                                 type="button"
                                 aria-label="Search"
                                 className={cn(
-                                    'transition-colors cursor-pointer flex',
+                                    'hidden lg:flex',
+                                    'transition-colors cursor-pointer',
                                     'group-[.transparent]:text-white group-[.transparent]:hover:text-white/80',
                                     'group-[.default]:hover:primary'
                                 )}
                             >
                                 <Search className="size-6" />
                             </button>
+                            <button
+                                type="button"
+                                aria-label="Toggle menu"
+                                className={cn(
+                                    'flex lg:hidden',
+                                    'transition-colors cursor-pointer',
+                                    'group-[.transparent]:text-white group-[.transparent]:hover:text-white/80',
+                                    'group-[.default]:hover:primary'
+                                )}
+                                onClick={() => setMobileOpen(!mobileOpen)}
+                            >
+                                {mobileOpen ? (
+                                    <svg
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    >
+                                        <path d="M18 6 6 18" />
+                                        <path d="m6 6 12 12" />
+                                    </svg>
+                                ) : (
+                                    <Menu className="size-6" />
+                                )}
+                            </button>
                         </div>
-
-                        {/* Mobile Menu Button */}
-                        <button
-                            type="button"
-                            aria-label="Toggle menu"
-                            className="md:hidden text-white cursor-pointer"
-                            onClick={() => setMobileOpen(!mobileOpen)}
-                        >
-                            {mobileOpen ? (
-                                <svg
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                >
-                                    <path d="M18 6 6 18" />
-                                    <path d="m6 6 12 12" />
-                                </svg>
-                            ) : (
-                                <svg
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                >
-                                    <path d="M3 12h18" />
-                                    <path d="M3 6h18" />
-                                    <path d="M3 18h18" />
-                                </svg>
-                            )}
-                        </button>
                     </nav>
                 </Container>
 
