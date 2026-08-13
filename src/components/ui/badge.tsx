@@ -13,7 +13,7 @@ const badgeVariants = cva('rounded-full flex items-center justify-center', {
             warning: '',
             info: '',
             orange: '',
-            danger: 'bg-red-500 text-white',
+            danger: 'bg-danger text-gray-50',
         },
         appearance: {
             default: '',

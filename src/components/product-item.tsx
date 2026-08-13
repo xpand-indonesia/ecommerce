@@ -51,7 +51,10 @@ const ProductItem = ({
                         className="object-cover group-hover:scale-102 transition-transform duration-300"
                     />
                     {!!isBestSeller && (
-                        <Badge className="absolute top-4 left-4 bg-red text-white px-6.5 py-3">
+                        <Badge
+                            className="absolute top-4 left-4 bg-red text-white px-[27px] py-3"
+                            size="sm"
+                        >
                             Best Seller
                         </Badge>
                     )}
