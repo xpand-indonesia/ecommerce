@@ -1,8 +1,8 @@
+import { Footer, Header, LayoutProvider } from '@/components/layout';
 import type { Metadata } from 'next';
 import { Lato } from 'next/font/google';
 import localFont from 'next/font/local';
 import '../styles/globals.css';
-import { LayoutProvider, Footer, Header } from '@/components/layout';
 
 const lato = Lato({
     variable: '--font-lato',
@@ -42,7 +42,7 @@ export default function RootLayout({
             lang="en"
             className={`${lato.variable} ${areaInktrap.variable} antialiased`}
         >
-            <body className="min-h-full">
+            <body className="min-h-screen">
                 <LayoutProvider>
                     <Header />
                     <main>{children}</main>
