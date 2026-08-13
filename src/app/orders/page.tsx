@@ -26,7 +26,7 @@ export default function MyOrdersPage() {
                         </Link>
                     </div>
                     <Tabs>
-                        <Tabs>
+                        <Tabs defaultValue="orders">
                             <TabsList>
                                 <TabsTrigger value="orders">
                                     My Orders
