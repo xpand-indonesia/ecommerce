@@ -28,7 +28,7 @@ export function OrderList({ orders = [] }: { orders?: any[] }) {
             {orders.length ? (
                 <div className="flex flex-col gap-4">
                     {orders.map((order, idx) => (
-                        <OrderItem />
+                        <OrderItem key={`order-item-${idx}`} />
                     ))}
                 </div>
             ) : (

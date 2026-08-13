@@ -1,10 +1,14 @@
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { formatNumber } from '@/lib/utils';
+import Link from 'next/link';
 
 export function OrderItem() {
     return (
-        <div className="border border-gray-300 p-4 flex flex-col gap-4 rounded-2xl">
+        <Link
+            href={`/orders/${1}`}
+            className="border border-gray-300 p-4 flex flex-col gap-4 rounded-2xl hover:border-primary transition-colors"
+        >
             <div className="flex flex-col gap-2">
                 <div className="flex items-center justify-between">
                     <div className="text-sm text-gray-800">ID T3CH4F00B</div>
@@ -44,6 +48,6 @@ export function OrderItem() {
                     {formatNumber(60000, { currency: 'IDR' })}
                 </div>
             </div>
-        </div>
+        </Link>
     );
 }

@@ -1,4 +1,4 @@
-import { ArrowRight } from '@/components/icons/arrow-right';
+import { ChevronRight } from '@/components/icons/chevron-right';
 import { formatNumber } from '@/lib/utils';
 
 export function SelectPaymentMethod() {
@@ -12,7 +12,7 @@ export function SelectPaymentMethod() {
                 </div>
             </div>
             <div className="ml-auto">
-                <ArrowRight className="size-6 text-gray-800" />
+                <ChevronRight className="size-6 text-gray-800" />
             </div>
         </div>
     );

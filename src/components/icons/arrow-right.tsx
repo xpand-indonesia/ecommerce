@@ -7,25 +7,29 @@ interface ArrowRightProps extends React.ComponentPropsWithoutRef<'svg'> {
 export const ArrowRight: React.FC<ArrowRightProps> = ({
     className,
     ...props
-}) => {
-    return (
-        <svg
-            width="1em"
-            height="1em"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className={className}
-            {...props}
-        >
-            <path
-                d="M8.91016 19.9201L15.4302 13.4001C16.2002 12.6301 16.2002 11.3701 15.4302 10.6001L8.91016 4.08008"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeMiterlimit="10"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
-        </svg>
-    );
-};
+}) => (
+    <svg
+        width="1em"
+        height="1em"
+        viewBox="0 0 16 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className={className}
+        {...props}
+    >
+        <path
+            d="M9.62109 3.95312L13.6678 7.99979L9.62109 12.0465"
+            stroke="currentColor"
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M2.33203 8H13.552"
+            stroke="currentColor"
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+);

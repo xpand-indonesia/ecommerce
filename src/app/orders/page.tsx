@@ -33,7 +33,7 @@ export default function MyOrdersPage() {
                             </div>
                         </div>
                     </div>
-                    <OrderList />
+                    <OrderList orders={[{}, {}]} />
                 </div>
             </div>
         </>
