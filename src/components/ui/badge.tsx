@@ -9,7 +9,10 @@ const badgeVariants = cva('rounded-full flex items-center justify-center', {
         },
         variant: {
             default: '',
+            success: '',
             warning: '',
+            info: '',
+            orange: '',
             danger: 'bg-red-500 text-white',
         },
         appearance: {
@@ -19,9 +22,29 @@ const badgeVariants = cva('rounded-full flex items-center justify-center', {
     },
     compoundVariants: [
         {
+            variant: 'success',
+            appearance: 'light',
+            class: 'bg-[#BEFFD0] text-[#018F28]',
+        },
+        {
             variant: 'warning',
             appearance: 'light',
             class: 'bg-[#FFEECC] text-[#996502]',
+        },
+        {
+            variant: 'info',
+            appearance: 'light',
+            class: 'bg-[#EFDFFF] text-[#7909FF]',
+        },
+        {
+            variant: 'orange',
+            appearance: 'light',
+            class: 'bg-[#FFDEC5] text-[#B93C08]',
+        },
+        {
+            variant: 'danger',
+            appearance: 'light',
+            class: 'bg-[#F9D9E1] text-[#C43B5E]',
         },
     ],
     defaultVariants: {
