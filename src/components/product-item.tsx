@@ -1,9 +1,9 @@
-import Image from "next/image";
-import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
-import { formatNumber } from "@/lib/utils";
-import { useMemo } from "react";
-import Link from "next/link";
+import { cn, formatNumber } from '@/lib/utils';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useMemo } from 'react';
+import { Badge } from './ui/badge';
+import { Button } from './ui/button';
 
 interface ProductItemProps {
     id?: number | string;
@@ -12,10 +12,20 @@ interface ProductItemProps {
     price: number;
     discount: number;
     stock: number;
-    isBestSeller?: boolean
-};
+    isBestSeller?: boolean;
+    className?: string;
+}
 
-const ProductItem = ({ id, image, name, price, discount, stock, isBestSeller = false }: ProductItemProps) => {
+const ProductItem = ({
+    id,
+    image,
+    name,
+    price,
+    discount,
+    stock,
+    isBestSeller = false,
+    className,
+}: ProductItemProps) => {
     const imageUrl = useMemo(() => {
         return `/images/mock/${image}`;
     }, [image]);
@@ -25,11 +35,11 @@ const ProductItem = ({ id, image, name, price, discount, stock, isBestSeller = f
     }, [price, discount]);
 
     const discountPercentage = useMemo(() => {
-        return discount / price * 100;
+        return (discount / price) * 100;
     }, [price, discount]);
 
     return (
-        <div className="flex flex-col gap-4 group">
+        <div className={cn('flex flex-col gap-4 group', className)}>
             {/* Product Image */}
             <Link href={`/product/${id}`}>
                 <div className="relative w-full aspect-square rounded-[32px] overflow-hidden bg-gray-200">
@@ -57,9 +67,7 @@ const ProductItem = ({ id, image, name, price, discount, stock, isBestSeller = f
 
             {/* Product Information */}
             <div className="flex flex-col gap-2">
-                <h3 className="text-xl transition-colors">
-                    {name}
-                </h3>
+                <h3 className="text-xl transition-colors">{name}</h3>
                 <div className="flex items-center gap-2">
                     {discount > 0 && (
                         <span className="text-sm text-gray-500 line-through">
@@ -70,7 +78,9 @@ const ProductItem = ({ id, image, name, price, discount, stock, isBestSeller = f
                         {formatNumber(discountedPrice, { currency: 'IDR' })}
                     </span>
                     {discount > 0 && (
-                        <Badge variant="danger">OFF {formatNumber(discountPercentage)}%</Badge>
+                        <Badge variant="danger">
+                            OFF {formatNumber(discountPercentage)}%
+                        </Badge>
                     )}
                 </div>
             </div>
@@ -85,6 +95,4 @@ const ProductItem = ({ id, image, name, price, discount, stock, isBestSeller = f
     );
 };
 
-export {
-    ProductItem
-};
+export { ProductItem };
