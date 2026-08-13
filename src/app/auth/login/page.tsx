@@ -8,10 +8,10 @@ export default function SignInPage() {
     return (
         <>
             <HeaderProp style="default" />
-            <section className="py-8 header-safe-8">
+            <section className="py-6 lg:py-8 header-safe-6 lg:header-safe-8">
                 <Container>
                     <div className="flex gap-6">
-                        <div className="flex-1">
+                        <div className="flex-1 hidden lg:block">
                             <div className="relative rounded-[32px] h-[656px] w-full overflow-hidden">
                                 <div className="absolute top-0 left-0 w-full h-full">
                                     <Image

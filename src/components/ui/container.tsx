@@ -7,7 +7,7 @@ export interface ContainerProps extends React.ComponentPropsWithRef<'div'> {
 
 export default function Container({ className, children }: ContainerProps) {
     return (
-        <div className={cn('container mx-auto px-6', className)}>
+        <div className={cn('container mx-auto px-4 lg:px-6', className)}>
             {children}
         </div>
     );
