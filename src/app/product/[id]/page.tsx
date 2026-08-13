@@ -1,21 +1,21 @@
 import {
-    ProductDetailSectionView,
     ProductDetailBlendSectionView,
     ProductDetailBrewProcessSectionView,
     ProductDetailFAQSectionView,
-    ProductDetailReviewSectionView,
     ProductDetailRecommendationSectionView,
+    ProductDetailReviewSectionView,
+    ProductDetailSectionView,
 } from '@/features/product-detail';
 
 export default function ProductDetailPage() {
     return (
-        <main className="pt-[75px]">
+        <div className="header-safe-0">
             <ProductDetailSectionView />
             <ProductDetailBlendSectionView />
             <ProductDetailBrewProcessSectionView />
             <ProductDetailFAQSectionView />
             <ProductDetailReviewSectionView />
             <ProductDetailRecommendationSectionView />
-        </main>
+        </div>
     );
 }
