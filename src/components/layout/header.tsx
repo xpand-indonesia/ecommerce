@@ -5,8 +5,21 @@ import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { HeaderMenuItem } from './components/header-menu-item';
 import { HeaderWrapper } from './components/header-wrapper';
 import { HeaderStyle, useLayout } from './context/layout-context';
+
+interface Menu {
+    href: string;
+    label: string;
+}
+
+const MENUS: Menu[] = [
+    { href: '/catalog/coffee', label: 'Coffee+' },
+    { href: '/catalog/tea', label: 'Tea+' },
+    { href: '/catalog/chocolate', label: 'Chocolate+' },
+    { href: '#', label: 'Support' },
+];
 
 export function Header() {
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -37,46 +50,12 @@ export function Header() {
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center gap-8">
-                        <Link
-                            href="/catalog/coffee"
-                            className={cn(
-                                'font-heading text-base transition-colors',
-                                'group-[.transparent]:text-white group-[.transparent]:hover:text-white/80',
-                                'group-[.default]:hover:primary'
-                            )}
-                        >
-                            Coffee+
-                        </Link>
-                        <Link
-                            href="/catalog/tea"
-                            className={cn(
-                                'font-heading text-base transition-colors',
-                                'group-[.transparent]:text-white group-[.transparent]:hover:text-white/80',
-                                'group-[.default]:hover:primary'
-                            )}
-                        >
-                            Tea+
-                        </Link>
-                        <Link
-                            href="/catalog/chocolate"
-                            className={cn(
-                                'font-heading text-base transition-colors',
-                                'group-[.transparent]:text-white group-[.transparent]:hover:text-white/80',
-                                'group-[.default]:hover:primary'
-                            )}
-                        >
-                            Chocolate+
-                        </Link>
-                        <Link
-                            href="#"
-                            className={cn(
-                                'font-heading text-base transition-colors',
-                                'group-[.transparent]:text-white group-[.transparent]:hover:text-white/80',
-                                'group-[.default]:hover:primary'
-                            )}
-                        >
-                            Support
-                        </Link>
+                        {MENUS.map((menu, index) => (
+                            <HeaderMenuItem
+                                key={`header-menu-${index}`}
+                                {...menu}
+                            />
+                        ))}
                     </div>
 
                     {/* Desktop Icons */}
