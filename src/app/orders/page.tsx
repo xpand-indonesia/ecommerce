@@ -11,7 +11,7 @@ export default function MyOrdersPage() {
     return (
         <>
             <HeaderProp style="default" />
-            <div className="header-safe py-8">
+            <div className="header-safe-8 py-8">
                 <div className="max-w-[754px] mx-auto space-y-4">
                     <div className="flex items-center justify-between">
                         <ContentTitle>Hi, Ricky Septian</ContentTitle>

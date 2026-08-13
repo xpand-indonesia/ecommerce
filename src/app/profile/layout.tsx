@@ -11,7 +11,7 @@ export default function ProfileLayout({
     return (
         <>
             <HeaderProp style="default" />
-            <div className="header-safe py-8">
+            <div className="header-safe-8 py-8">
                 <div className="max-w-[853px] mx-auto flex items-stretch gap-6">
                     <div className="w-[276px] flex flex-col gap-6">
                         <ContentTitle>Settings</ContentTitle>

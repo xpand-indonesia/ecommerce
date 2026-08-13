@@ -8,7 +8,7 @@ export default function SignInPage() {
     return (
         <>
             <HeaderProp style="default" />
-            <section className="py-8 header-safe">
+            <section className="py-8 header-safe-8">
                 <Container>
                     <div className="flex gap-6">
                         <div className="flex-1">

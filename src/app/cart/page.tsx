@@ -1,23 +1,23 @@
-import React from 'react';
-import { formatNumber } from '@/lib/utils';
-import { HeaderProp } from '@/components/layout';
-import { ProductItem } from '@/components/product-item';
-import Container from '@/components/ui/container';
-import { ContentTitle } from '@/components/ui/content-title';
-import { Separator } from '@/components/ui/separator';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { ApplyCouponForm, CartSummary } from '@/features/cart';
-import { InputCounter } from '@/components/ui/form/field/input-counter';
-import { Badge } from '@/components/ui/badge';
 import { Plus } from '@/components/icons';
 import { XCircle } from '@/components/icons/x-circle';
+import { HeaderProp } from '@/components/layout';
+import { ProductItem } from '@/components/product-item';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import Container from '@/components/ui/container';
+import { ContentTitle } from '@/components/ui/content-title';
+import { InputCounter } from '@/components/ui/form/field/input-counter';
+import { Separator } from '@/components/ui/separator';
+import { ApplyCouponForm, CartSummary } from '@/features/cart';
+import { formatNumber } from '@/lib/utils';
+import Link from 'next/link';
+import React from 'react';
 
 export default function CartPage() {
     return (
         <>
             <HeaderProp style="default" />
-            <Container className="header-safe py-8 px-10">
+            <Container className="header-safe-8 py-8 px-10">
                 <div className="flex">
                     <div className="flex-1 pr-6 mr-6 border-r border-gray-300 flex flex-col gap-6">
                         <div className="flex items-center justify-between">

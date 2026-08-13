@@ -1,9 +1,9 @@
-import { formatNumber } from '@/lib/utils';
 import { HeaderProp } from '@/components/layout';
+import { Button } from '@/components/ui/button';
 import Container from '@/components/ui/container';
 import { ContentTitle } from '@/components/ui/content-title';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import { Checkbox } from '@/components/ui/form/field/checkbox';
+import { Label } from '@/components/ui/form/label';
 import { ApplyCouponForm } from '@/features/cart';
 import {
     BillingShippingForm,
@@ -11,14 +11,14 @@ import {
     SelectPaymentMethod,
     SelectShippingMethod,
 } from '@/features/checkout';
-import { Checkbox } from '@/components/ui/form/field/checkbox';
-import { Label } from '@/components/ui/form/label';
+import { formatNumber } from '@/lib/utils';
+import Link from 'next/link';
 
 export default function CheckoutPage() {
     return (
         <>
             <HeaderProp style="default" />
-            <Container className="header-safe py-8 px-10">
+            <Container className="header-safe-8 py-8 px-10">
                 <div className="flex">
                     <div className="flex-1 pr-6 mr-6 border-r border-gray-300 flex flex-col gap-6">
                         <div className="flex items-center justify-between">

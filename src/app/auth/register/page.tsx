@@ -13,7 +13,7 @@ export default function RegisterPage() {
     return (
         <>
             <HeaderProp style="default" />
-            <section className="header-safe py-8">
+            <section className="header-safe-8 py-8">
                 <Container>
                     <div className="flex gap-6">
                         <div className="flex-1">
