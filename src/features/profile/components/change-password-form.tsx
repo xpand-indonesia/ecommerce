@@ -24,7 +24,7 @@ export function ChangePasswordForm() {
                         onClick={() => setPasswordVisible(!passwordVisible)}
                         className="absolute right-0 top-1/2 -translate-y-[50%] h-full px-4 flex items-center justify-center rounded-full cursor-pointer"
                     >
-                        <Eye className="size-5" />
+                        <Eye className="size-5 text-gray-800" />
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@ export function ChangePasswordForm() {
                         }
                         className="absolute right-0 top-1/2 -translate-y-[50%] h-full px-4 flex items-center justify-center rounded-full cursor-pointer"
                     >
-                        <Eye className="size-5" />
+                        <Eye className="size-5 text-gray-800" />
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@ export function ChangePasswordForm() {
                         }
                         className="absolute right-0 top-1/2 -translate-y-[50%] h-full px-4 flex items-center justify-center rounded-full cursor-pointer"
                     >
-                        <Eye className="size-5" />
+                        <Eye className="size-5 text-gray-800" />
                     </div>
                 </div>
             </div>
