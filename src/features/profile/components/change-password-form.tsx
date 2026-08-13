@@ -1,9 +1,7 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/form/field/input';
 import { Label } from '@/components/ui/form/label';
-import { ChangePasswordTrigger } from './change-password-trigger';
 import { useState } from 'react';
 
 export function ChangePasswordForm() {
