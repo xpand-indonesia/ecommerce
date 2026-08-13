@@ -1,10 +1,13 @@
 'use client';
 
+import { User } from '@/components/icons/user';
 import Container from '@/components/ui/container';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { Bag2 } from '../icons/bag2';
+import { Search } from '../icons/search';
 import { HeaderMenuItem } from './components/header-menu-item';
 import { HeaderWrapper } from './components/header-wrapper';
 import { HeaderStyle, useLayout } from './context/layout-context';
@@ -66,24 +69,12 @@ export function Header() {
                                 type="button"
                                 aria-label="User account"
                                 className={cn(
-                                    'transition-colors cursor-pointer',
+                                    'transition-colors cursor-pointer flex',
                                     'group-[.transparent]:text-white hover:text-white/80',
                                     'group-[.default]:hover:primary'
                                 )}
                             >
-                                <svg
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="1.5"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                >
-                                    <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" />
-                                    <path d="M20.59 22c0-3.87-3.85-7-8.59-7s-8.59 3.13-8.59 7" />
-                                </svg>
+                                <User className="size-6" />
                             </button>
                         </Link>
                         {/* Cart Icon */}
@@ -91,49 +82,24 @@ export function Header() {
                             type="button"
                             aria-label="Shopping cart"
                             className={cn(
-                                'transition-colors cursor-pointer',
+                                'transition-colors cursor-pointer flex',
                                 'group-[.transparent]:text-white hover:text-white/80',
                                 'group-[.default]:hover:primary'
                             )}
                         >
-                            <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="1.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            >
-                                <path d="M8.4 6.5h7.2c3.4 0 3.74 1.59 3.97 3.53l.9 7.5C20.76 19.89 19.5 22 16 22H8c-3.5 0-4.76-2.11-4.47-4.47l.9-7.5C4.66 8.09 5 6.5 8.4 6.5Z" />
-                                <path d="M8 8V4.5C8 3 9 2 10.5 2h3C15 2 16 3 16 4.5V8" />
-                                <path d="M20.41 17.03H8" />
-                            </svg>
+                            <Bag2 className="size-6" />
                         </button>
                         {/* Search Icon */}
                         <button
                             type="button"
                             aria-label="Search"
                             className={cn(
-                                'transition-colors cursor-pointer',
+                                'transition-colors cursor-pointer flex',
                                 'group-[.transparent]:text-white hover:text-white/80',
                                 'group-[.default]:hover:primary'
                             )}
                         >
-                            <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="1.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            >
-                                <circle cx="11.5" cy="11.5" r="9.5" />
-                                <path d="m22 22-2-2" />
-                            </svg>
+                            <Search className="size-6" />
                         </button>
                     </div>
 
