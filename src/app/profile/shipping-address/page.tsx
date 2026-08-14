@@ -4,7 +4,9 @@ import { ShippingAddressCrud } from '@/features/shipping-address';
 export default function ProfileShippingAddressPage() {
     return (
         <>
-            <ContentTitle>Shipping Address</ContentTitle>
+            <ContentTitle className="hidden lg:block">
+                Shipping Address
+            </ContentTitle>
             <ShippingAddressCrud />
         </>
     );

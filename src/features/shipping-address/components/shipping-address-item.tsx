@@ -1,5 +1,6 @@
-import { cn } from '@/lib/utils';
+import { TickCircle } from '@/components/icons/tick-circle';
 import { TickCircleOutline } from '@/components/icons/tick-circle-outline';
+import { cn } from '@/lib/utils';
 import { Address } from '../types/shipping-address-type';
 
 interface ShippingAddressItemProps {
@@ -24,19 +25,18 @@ export function ShippingAddressItem({
                 <div className="font-heading font-bold text-lg text-gray-800">
                     {address.name}
                 </div>
-                <TickCircleOutline
-                    className={cn(
-                        'size-6',
-                        address.isDefault ? 'text-primary' : 'text-gray-500'
-                    )}
-                />
+                {address.isDefault ? (
+                    <TickCircle className="size-6 text-gray-800" />
+                ) : (
+                    <TickCircleOutline className="size-6 text-gray-500" />
+                )}
             </div>
             <div className="flex items-center gap-1 text-sm text-gray-800">
                 <span>{address.phone}</span>
                 <span>•</span>
                 <span>{address.email}</span>
             </div>
-            <div>{address.address}</div>
+            <div className="text-sm text-gray-500">{address.address}</div>
             <div className="flex items-center justify-between">
                 <div>
                     {!address.isDefault && (
