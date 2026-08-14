@@ -1,7 +1,9 @@
+import { ArrowLeft } from '@/components/icons/arrow-left';
 import { HeaderProp } from '@/components/layout';
 import { ContentTitle } from '@/components/ui/content-title';
 import { Separator } from '@/components/ui/separator';
-import { MENUS, ProfileMenuItem } from '@/features/profile';
+import { MENUS, ProfileMenuItem, ProfileMenuSelect } from '@/features/profile';
+import Link from 'next/link';
 
 export default function ProfileLayout({
     children,
@@ -11,9 +13,21 @@ export default function ProfileLayout({
     return (
         <>
             <HeaderProp style="default" />
-            <div className="header-safe-8 py-8">
-                <div className="max-w-[853px] mx-auto flex items-stretch gap-6">
-                    <div className="w-[276px] flex flex-col gap-6">
+            <div className="py-4 header-safe-4 lg:py-8 lg:header-safe-8">
+                <div className="lg:max-w-[853px] lg:mx-auto flex flex-col lg:flex-row lg:items-stretch gap-6 px-4 lg:px-0">
+                    <div className="space-y-4 block lg:hidden">
+                        <Link
+                            href="/orders"
+                            className="flex items-center gap-4"
+                        >
+                            <ArrowLeft className="size-6" />
+                            <span className="text-2xl font-bold text-gray-800">
+                                Settings
+                            </span>
+                        </Link>
+                        <ProfileMenuSelect />
+                    </div>
+                    <div className="hidden lg:flex w-[276px] flex-col gap-6">
                         <ContentTitle>Settings</ContentTitle>
                         <ul className="flex flex-col gap-2">
                             {MENUS.map((menu, idx) => (
@@ -27,7 +41,7 @@ export default function ProfileLayout({
                             ))}
                         </ul>
                     </div>
-                    <div>
+                    <div className="hidden lg:block">
                         <Separator
                             orientation="vertical"
                             className="bg-gray-300"
