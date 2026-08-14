@@ -117,7 +117,9 @@ export function EmptyOrder() {
                 </defs>
             </svg>
 
-            <div>No Order Yet, Let's Order Now</div>
+            <div className="text-sm lg:text-base">
+                No Order Yet, Let's Order Now
+            </div>
             <Link href="/">
                 <Button variant="outline" className="px-4 h-[35px]">
                     Go Shopping

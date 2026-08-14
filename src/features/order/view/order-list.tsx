@@ -12,7 +12,7 @@ export function OrderList({ orders = [] }: { orders?: any[] }) {
     return (
         <div className="flex flex-col gap-6">
             <div className="flex items-center justify-between">
-                <div className="text-xl font-heading font-bold">
+                <div className="text-base lg:text-xl font-heading font-bold">
                     Total Order: {orders.length}
                 </div>
                 <Select>

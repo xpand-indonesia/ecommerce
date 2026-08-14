@@ -1,6 +1,7 @@
 import { Setting } from '@/components/icons/setting';
 import { HeaderProp } from '@/components/layout';
 import { Button } from '@/components/ui/button';
+import Container from '@/components/ui/container';
 import { ContentTitle } from '@/components/ui/content-title';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { OrderList } from '@/features/order';
@@ -11,17 +12,19 @@ export default function MyOrdersPage() {
     return (
         <>
             <HeaderProp style="default" />
-            <div className="header-safe-8 py-8">
-                <div className="max-w-[754px] mx-auto space-y-4">
+            <div className="py-4 header-safe-4 lg:py-8 lg:header-safe-8">
+                <Container className="px-4 lg:max-w-[754px] lg:px-0 space-y-4">
                     <div className="flex items-center justify-between">
                         <ContentTitle>Hi, Ricky Septian</ContentTitle>
                         <Link href="/profile">
                             <Button
                                 variant="outline"
-                                className="h-10 gap-2 px-4"
+                                className="w-10 h-10 gap-2 px-0 lg:w-auto lg:px-4"
                             >
                                 <Setting className="size-6" />
-                                Settings
+                                <span className="hidden lg:inline">
+                                    Settings
+                                </span>
                             </Button>
                         </Link>
                     </div>
@@ -48,7 +51,7 @@ export default function MyOrdersPage() {
                             </div>
                         </Tabs>
                     </Tabs>
-                </div>
+                </Container>
             </div>
         </>
     );
