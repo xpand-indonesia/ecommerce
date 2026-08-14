@@ -6,7 +6,7 @@ export default function OrderDetailPage() {
     return (
         <>
             <HeaderProp style="default" />
-            <Container className="header-safe-8 max-w-[754px] py-8">
+            <Container className="py-4 header-safe-4 lg:py-8 lg:header-safe-8 lg:max-w-[754px]">
                 <OrderDetail />
             </Container>
         </>

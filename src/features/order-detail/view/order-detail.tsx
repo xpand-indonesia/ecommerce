@@ -23,7 +23,7 @@ export function OrderDetail() {
             <div className="flex flex-col gap-6">
                 <div className="flex flex-col gap-4">
                     <div className="flex items-center justify-between">
-                        <div className="font-heading text-4xl font-bold text-gray-800">
+                        <div className="font-heading text-2xl lg:text-4xl font-bold text-gray-800">
                             My Order
                         </div>
                         <div className="flex items-center gap-1">
@@ -65,7 +65,7 @@ export function OrderDetail() {
                                 POS IND 908343: 25LG
                             </div>
                         </div>
-                        <div className="flex items-center justify-between text-sm">
+                        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between text-sm gap-1">
                             <div className="text-gray-500">
                                 Current Shipping
                             </div>
@@ -105,17 +105,20 @@ export function OrderDetail() {
                     <div className="bg-gray-50 rounded-2xl p-4 space-y-4">
                         <div className="flex gap-2">
                             <div className="size-[64px] bg-[#f7f7f7] rounded-[10.24px]"></div>
-                            <div>
-                                <div>Funki Mushroom Coffee</div>
-                                <div className="text-sm text-gray-800">
+                            <div className="flex-1">
+                                <div className="leading-[1.1875]">
+                                    Funki Mushroom Coffee
+                                </div>
+                                <div className="text-sm leading-[1.214285714] text-gray-800">
                                     27oz - Red Bean
                                 </div>
-                                <div className="text-xs text-gray-500">
+                                <div className="text-xs text-gray-500 hidden lg:block">
                                     Note : Please mix the flavour with matcha
                                     and espresso
                                 </div>
-                                <div className="text-sm text-gray-800">
-                                    {formatNumber(30000)} x2
+                                <div className="text-sm leading-[1.214285714] text-gray-800 mt-[11px] lg:mt-0 flex items-center justify-between">
+                                    <span>{formatNumber(30000)} x2</span>
+                                    <span>{formatNumber(60000)}</span>
                                 </div>
                             </div>
                         </div>
@@ -180,7 +183,7 @@ export function OrderDetail() {
                         </div>
                     </div>
                 </div>
-                <div className="bg-gray-50 p-4 rounded-2xl flex items-center gap-2">
+                <div className="bg-gray-50 p-4 rounded-2xl items-center gap-2 hidden lg:flex">
                     <div className="flex items-center justify-center bg-[#F4F1F1] rounded-3xl size-[38px] shadow-[0_0_8.4px_rgba(0,0,0,0.15)]">
                         <BagCross className="size-5 text-gray-800" />
                     </div>
@@ -195,11 +198,13 @@ export function OrderDetail() {
                         <ArrowRight className="size-4" />
                     </div>
                 </div>
-                <div className="flex items-center justify-between">
-                    <div className="text-primary h-[51px] w-[161px] flex items-center justify-center cursor-pointer">
+                <div className="flex flex-col lg:flex-row items-center lg:justify-between gap-6">
+                    <div className="order-2 lg:order-1 text-primary h-[51px] w-[161px] flex items-center justify-center cursor-pointer">
                         Download Recipt
                     </div>
-                    <Button>Continue Shopping</Button>
+                    <Button className="order-1 lg:order-2">
+                        Continue Shopping
+                    </Button>
                 </div>
             </div>
             <TrackShipmentSheet
