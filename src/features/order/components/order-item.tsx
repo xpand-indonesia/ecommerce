@@ -10,13 +10,15 @@ export function OrderItem() {
             className="border border-gray-300 p-4 flex flex-col gap-4 rounded-2xl hover:border-primary transition-colors"
         >
             <div className="flex flex-col gap-2">
-                <div className="flex items-center justify-between">
-                    <div className="text-sm text-gray-800">ID T3CH4F00B</div>
+                <div className="flex items-start lg:items-center justify-between">
+                    <div className="text-sm/none text-gray-800">
+                        ID T3CH4F00B
+                    </div>
                     <Badge size="sm" variant="warning" appearance="light">
                         Pending
                     </Badge>
                 </div>
-                <div className="flex items-center justify-between text-sm">
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between text-sm gap-1">
                     <div className="text-gray-500">29 Sep 2025</div>
                     <div className="text-gray-800">
                         Accepted at Post Office, Cab. Tangerang
@@ -32,7 +34,7 @@ export function OrderItem() {
                             27oz - Red Bean
                         </div>
                     </div>
-                    <div className="text-xs text-gray-500">
+                    <div className="text-xs text-gray-500 hidden lg:block">
                         Note : Please mix the flavour with matcha and espresso
                     </div>
                     <div className="flex items-center justify-between text-xs text-gray-800">

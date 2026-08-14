@@ -7,8 +7,12 @@ export function WishlistItem() {
             <div className="size-[64px] rounded-[10.24px] bg-gray-bg"></div>
             <div className="flex-1">
                 <div>
-                    <div>Funki Mushroom Coffee</div>
-                    <div className="text-gray-800 text-sm">27oz - Red Bean</div>
+                    <div className="leading-[1.1875]">
+                        Funki Mushroom Coffee
+                    </div>
+                    <div className="text-gray-800 text-sm leading-[1.214285714]">
+                        27oz - Red Bean
+                    </div>
                 </div>
                 <div className="flex items-end justify-between">
                     <div>{formatNumber(30000, { currency: 'IDR' })}</div>
