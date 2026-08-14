@@ -66,7 +66,7 @@ export function Header() {
                         </div>
                         <div className="flex items-center gap-2 lg:gap-8">
                             <Link
-                                href="/profile"
+                                href="/orders"
                                 className="hidden lg:inline-flex"
                             >
                                 <button
