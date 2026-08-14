@@ -45,14 +45,16 @@ function SheetOverlay({
 }
 
 const sheetVariants = cva(
-    'flex flex-col items-strech fixed z-50 gap-3.5 bg-gray-50 p-6 transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-400',
+    'flex flex-col items-strech fixed z-50 gap-4 lg:gap-3.5 bg-gray-50 p-6 transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-400',
     {
         variants: {
             side: {
                 top: 'inset-x-0 top-0 data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top',
                 bottom: 'inset-x-0 bottom-0 data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom',
                 left: 'inset-y-0 start-0 h-full w-3/4 data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm rtl:data-[state=closed]:slide-out-to-right rtl:data-[state=open]:slide-in-from-right',
-                right: 'inset-y-0 end-0 h-full w-3/4  data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm rtl:data-[state=closed]:slide-out-to-left rtl:data-[state=open]:slide-in-from-left',
+                right:
+                    'inset-x-0 bottom-0 h-3/4 rounded-t-2xl data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom ' +
+                    'lg:inset-y-0 lg:end-0 lg:inset-x-auto lg:h-full lg:w-3/4 lg:max-w-sm lg:rounded-t-none lg:data-[state=closed]:slide-out-to-right lg:data-[state=open]:slide-in-from-right lg:rtl:data-[state=closed]:slide-out-to-left lg:rtl:data-[state=open]:slide-in-from-left',
             },
         },
         defaultVariants: {
@@ -88,7 +90,7 @@ function SheetContent({
                 {close && (
                     <SheetPrimitive.Close
                         data-slot="sheet-close"
-                        className="cursor-pointer absolute end-6 top-4 focus:outline-hidden disabled:pointer-events-none"
+                        className="cursor-pointer absolute end-4 lg:end-6 top-4 focus:outline-hidden disabled:pointer-events-none"
                     >
                         <CloseCircle className="size-6" />
                     </SheetPrimitive.Close>
@@ -103,7 +105,7 @@ function SheetHeader({ className, ...props }: React.ComponentProps<'div'>) {
         <div
             data-slot="sheet-header"
             className={cn(
-                'flex flex-col space-y-1 text-center sm:text-start',
+                'flex flex-col space-y-1 py-4 px-4 lg:px-6',
                 className
             )}
             {...props}

@@ -21,7 +21,7 @@ export function CartSheet({
     return (
         <Sheet open={open} onOpenChange={onOpenChange}>
             <SheetContent className="sm:w-[417px] sm:max-w-none start-auto h-auto p-0 gap-4">
-                <SheetHeader className="py-4 px-6">
+                <SheetHeader className="">
                     <SheetTitle className="flex items-center gap-2.5">
                         Cart (2)
                     </SheetTitle>
