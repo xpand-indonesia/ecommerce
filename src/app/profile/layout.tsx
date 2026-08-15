@@ -13,12 +13,12 @@ export default function ProfileLayout({
     return (
         <>
             <HeaderProp style="default" />
-            <div className="py-4 header-safe-4 lg:py-8 lg:header-safe-8">
+            <div className="py-4 header-safe-4 min-h-screen lg:py-8 lg:header-safe-8 lg:min-h-auto">
                 <div className="lg:max-w-[853px] lg:mx-auto flex flex-col lg:flex-row lg:items-stretch gap-6 px-4 lg:px-0">
                     <div className="space-y-4 block lg:hidden">
                         <Link
                             href="/orders"
-                            className="flex items-center gap-4"
+                            className="inline-flex items-center gap-4"
                         >
                             <ArrowLeft className="size-6" />
                             <span className="text-2xl font-bold text-gray-800">
