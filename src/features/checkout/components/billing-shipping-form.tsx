@@ -1,10 +1,11 @@
+import { Checkbox } from '@/components/ui/form/field/checkbox';
 import { Input } from '@/components/ui/form/field/input';
 import { Label } from '@/components/ui/form/label';
 
 export function BillingShippingForm() {
     return (
         <div className="flex flex-col gap-4">
-            <div className="flex items-center gap-4">
+            <div className="flex flex-col lg:flex-row lg:items-center gap-4">
                 <div className="flex-1 flex flex-col gap-2">
                     <Label>First Name</Label>
                     <Input
@@ -85,6 +86,26 @@ export function BillingShippingForm() {
                     placeholder="Add Note"
                     className="border-gray-200"
                 />
+            </div>
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-6">
+                <div className="flex items-center gap-2">
+                    <Checkbox id="create-account" />
+                    <Label
+                        htmlFor="create-account"
+                        className="text-sm font-medium text-gray-700 cursor-pointer"
+                    >
+                        Create an account?
+                    </Label>
+                </div>
+                <div className="flex items-center gap-2">
+                    <Checkbox id="create-account" />
+                    <Label
+                        htmlFor="create-account"
+                        className="text-sm font-medium text-gray-700 cursor-pointer"
+                    >
+                        Send me promos and product updates
+                    </Label>
+                </div>
             </div>
         </div>
     );

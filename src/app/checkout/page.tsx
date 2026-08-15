@@ -18,20 +18,23 @@ export default function CheckoutPage() {
     return (
         <>
             <HeaderProp style="default" />
-            <Container className="header-safe-8 py-8 px-10">
-                <div className="flex">
-                    <div className="flex-1 pr-6 mr-6 border-r border-gray-300 flex flex-col gap-6">
-                        <div className="flex items-center justify-between">
+            <Container className="py-4 header-safe-4 px-4 lg:py-8 lg:py-12 lg:header-safe-8 lg:px-10">
+                <div className="flex flex-col lg:flex-row">
+                    <div className="pb-4 gap-4 lg:flex-1 lg:pr-6 lg:mr-6 lg:border-r lg:border-gray-300 flex flex-col lg:gap-6">
+                        <div className="flex flex-col items-start lg:flex-row lg:items-center lg:justify-between gap-4">
                             <ContentTitle>Billing & Shipping</ContentTitle>
-                            <Button className="" variant="outline">
+                            <Button
+                                className="px-4 h-[35px] lg:h-[51px]"
+                                variant="outline"
+                            >
                                 Login Now
                             </Button>
                         </div>
                         <BillingShippingForm />
                     </div>
-                    <div className="w-[558px] flex flex-col gap-6">
+                    <div className="lg:w-[558px] flex flex-col gap-4 lg:gap-6">
                         <ContentTitle>Your Order</ContentTitle>
-                        <div className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-2 lg:gap-4">
                             <ApplyCouponForm />
                             <CheckoutSummary />
                         </div>
