@@ -19,7 +19,7 @@ export const ArrowLeft: React.FC<ArrowLeftProps> = ({
     >
         <path
             d="M9.57 5.93L3.5 12L9.57 18.07"
-            stroke="#252B37"
+            stroke="currentColor"
             strokeWidth="1.5"
             strokeMiterlimit="10"
             strokeLinecap="round"
@@ -27,7 +27,7 @@ export const ArrowLeft: React.FC<ArrowLeftProps> = ({
         />
         <path
             d="M20.4999 12H3.66992"
-            stroke="#252B37"
+            stroke="currentColor"
             strokeWidth="1.5"
             strokeMiterlimit="10"
             strokeLinecap="round"

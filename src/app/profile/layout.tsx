@@ -18,12 +18,10 @@ export default function ProfileLayout({
                     <div className="space-y-4 block lg:hidden">
                         <Link
                             href="/orders"
-                            className="inline-flex items-center gap-4"
+                            className="inline-flex items-center text-gray-800 gap-4"
                         >
                             <ArrowLeft className="size-6" />
-                            <span className="text-2xl font-bold text-gray-800">
-                                Settings
-                            </span>
+                            <span className="text-2xl font-bold">Settings</span>
                         </Link>
                         <ProfileMenuSelect />
                     </div>
