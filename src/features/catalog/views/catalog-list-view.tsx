@@ -5,6 +5,7 @@ import { ProductItem } from '@/components/product-item';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/form/field/checkbox';
 import { Label } from '@/components/ui/form/label';
+import { cn } from '@/lib/utils';
 import React, { useState } from 'react';
 import { FilterCollapsible } from '../components/filter-collapsible';
 
@@ -15,7 +16,7 @@ export function CatalogListView({
     name?: string;
     products?: any[];
 }) {
-    const [isFilterOpen, setIsFilterOpen] = useState(true);
+    const [isFilterOpen, setIsFilterOpen] = useState(false);
 
     const toggleFilter = () => {
         setIsFilterOpen(!isFilterOpen);
@@ -23,7 +24,12 @@ export function CatalogListView({
 
     return (
         <div className="flex items-stretch">
-            <div className={isFilterOpen ? 'max-w-auto' : 'max-w-0'}>
+            <div
+                className={cn(
+                    'overflow-hidden transition-all duration-500 flex flex-col items-end',
+                    isFilterOpen ? 'w-[343px]' : 'w-0'
+                )}
+            >
                 <div className="w-[319px] h-full pr-6 mr-6 border-r border-gray-300 space-y-6">
                     <div className="flex items-center justify-between">
                         <h2 className="font-heading font-bold text-3xl lg:text-4xl">
