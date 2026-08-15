@@ -1,10 +1,10 @@
 'use client';
 
-import Image from 'next/image';
 import { HeaderProp } from '@/components/layout';
 import { Button } from '@/components/ui/button';
-import HeroSection from './components/hero-section';
+import Image from 'next/image';
 import BannerSection from './components/banner-section';
+import HeroSection from './components/hero-section';
 import ProductSection from './components/product-section';
 
 export default function LandingPage() {
@@ -14,111 +14,85 @@ export default function LandingPage() {
             <HeroSection />
             <ProductSection />
             <BannerSection />
-
-            {/* ================= COME VISIT US SECTIONS ================= */}
-
-            {/* Section 1: Left Image, Right Text */}
-            <section className="w-full bg-white py-16 px-6 lg:px-[100px] max-w-[1440px] mx-auto">
-                <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center w-full">
-                    {/* Left Image Frame */}
-                    <div className="relative w-full lg:w-[604px] aspect-[604/455] rounded-[32px] overflow-hidden bg-gray-bg border border-gray-light/35 shadow-sm">
-                        <Image
-                            src="/images/mock/mock_image_1.png"
-                            alt="Beautiful local coffee cafe interior"
-                            fill
-                            className="object-cover"
-                        />
-                    </div>
-
-                    {/* Right Text Block */}
-                    <div className="flex flex-col gap-6 lg:w-[604px] items-start">
-                        <h2 className="font-heading font-bold text-3xl md:text-5xl text-dark leading-tight">
-                            Come Visit Us
-                        </h2>
-                        <p className="font-body text-base text-gray leading-relaxed">
-                            Our community is at the heart of what we do. You can
-                            learn more about each of our unique cafes all across
-                            Northwest Arkansas as well as our restaurant in
-                            Johnson. See cafe hours, explore the menu, and make
-                            plans to come see us any day of the week!
-                        </p>
-                        <Button
-                            variant="outline"
-                            className="h-[51px] px-8 cursor-pointer mt-2 hover:shadow-sm"
-                        >
-                            Our Location
-                        </Button>
-                    </div>
-                </div>
-            </section>
-
-            {/* Section 2: Left Text, Right Image */}
-            <section className="w-full bg-white py-16 px-6 lg:px-[100px] max-w-[1440px] mx-auto border-t border-gray-light/20">
-                <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-16 items-center w-full">
-                    {/* Right Image Frame */}
-                    <div className="relative w-full lg:w-[604px] aspect-[604/455] rounded-[32px] overflow-hidden bg-gray-bg border border-gray-light/35 shadow-sm">
+            <section className="w-full bg-white py-6 px-4 lg:px-25 lg:py-25">
+                <div className="flex flex-col-reverse lg:flex-row-reverse gap-6 lg:gap-8">
+                    <div className="lg:flex-1 relative w-full aspect-square lg:aspect-[604/455] rounded-4xl relative  overflow-hidden">
                         <Image
                             src="/images/mock/mock_image_1.png"
                             alt="Artisan coffee drinks presentation"
                             fill
+                            sizes="(max-width: 768px) 100vw"
                             className="object-cover"
                         />
                     </div>
-
-                    {/* Left Text Block */}
-                    <div className="flex flex-col gap-6 lg:w-[604px] items-start">
-                        <h2 className="font-heading font-bold text-3xl md:text-5xl text-dark leading-tight">
+                    <div className="lg:flex-1 flex flex-col gap-4 lg:gap-8 items-start">
+                        <h2 className="font-heading text-3xl leading-[1.333333333] lg:text-5xl lg:leading-[0.9375] text-gray-800">
                             Come Visit Us
                         </h2>
-                        <p className="font-body text-base text-gray leading-relaxed">
+                        <p className="text-base leading-[1.0625] lg:leading-[1.1875]">
                             Our community is at the heart of what we do. You can
                             learn more about each of our unique cafes all across
                             Northwest Arkansas as well as our restaurant in
                             Johnson. See cafe hours, explore the menu, and make
                             plans to come see us any day of the week!
                         </p>
-                        <Button
-                            variant="outline"
-                            className="h-[51px] px-8 cursor-pointer mt-2 hover:shadow-sm"
-                        >
+                        <Button variant="outline" className="lg:px-[38.5px]">
                             Our Location
                         </Button>
                     </div>
                 </div>
             </section>
-
-            {/* Section 3: Text above, Full-width Image below */}
-            <section className="w-full bg-white py-16 px-6 lg:px-[100px] max-w-[1440px] mx-auto border-t border-gray-light/20">
-                <div className="flex flex-col gap-10 w-full">
-                    {/* Header Content */}
-                    <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 w-full">
-                        <div className="flex flex-col gap-4 max-w-[800px]">
-                            <h2 className="font-heading font-bold text-3xl md:text-5xl text-dark leading-tight">
-                                Come Visit Us
-                            </h2>
-                            <p className="font-body text-base text-gray leading-relaxed">
-                                Our community is at the heart of what we do. You
-                                can learn more about each of our unique cafes
-                                all across Northwest Arkansas as well as our
-                                restaurant in Johnson. See cafe hours, explore
-                                the menu, and make plans to come see us any day
-                                of the week!
-                            </p>
-                        </div>
-                        <Button
-                            variant="outline"
-                            className="h-[51px] px-8 cursor-pointer hover:shadow-sm shrink-0 self-start lg:self-auto lg:mb-1"
-                        >
+            <section className="w-full bg-white py-6 px-4 lg:px-25 lg:py-25">
+                <div className="flex flex-col-reverse lg:flex-row gap-6 lg:gap-8">
+                    <div className="lg:flex-1 relative w-full aspect-square lg:aspect-[604/455] rounded-4xl relative  overflow-hidden">
+                        <Image
+                            src="/images/mock/mock_image_2.png"
+                            alt="Artisan coffee drinks presentation"
+                            fill
+                            sizes="(max-width: 768px) 100vw"
+                            className="object-cover"
+                        />
+                    </div>
+                    <div className="lg:flex-1 flex flex-col gap-4 lg:gap-8 items-start">
+                        <h2 className="font-heading text-3xl leading-[1.333333333] lg:text-5xl lg:leading-[0.9375] text-gray-800">
+                            Come Visit Us
+                        </h2>
+                        <p className="text-base leading-[1.0625] lg:leading-[1.1875]">
+                            Our community is at the heart of what we do. You can
+                            learn more about each of our unique cafes all across
+                            Northwest Arkansas as well as our restaurant in
+                            Johnson. See cafe hours, explore the menu, and make
+                            plans to come see us any day of the week!
+                        </p>
+                        <Button variant="outline" className="lg:px-[38.5px]">
                             Our Location
                         </Button>
                     </div>
-
-                    {/* Bottom Full-width Image */}
-                    <div className="relative w-full aspect-[1240/455] rounded-[32px] overflow-hidden bg-gray-bg border border-gray-light/35 shadow-sm">
+                </div>
+            </section>
+            <section className="py-6 px-4 lg:px-25 lg:py-25">
+                <div className="flex flex-col gap-4 lg:gap-8">
+                    <div className="flex flex-col items-start gap-4 lg:gap-8 w-full">
+                        <h2 className="font-heading text-3xl leading-[1.333333333] lg:text-5xl lg:leading-[0.9375] text-gray-800">
+                            Come Visit Us
+                        </h2>
+                        <p className="text-base leading-[1.0625] lg:leading-[1.1875]">
+                            Our community is at the heart of what we do. You can
+                            learn more about each of our unique cafes all across
+                            Northwest Arkansas as well as our restaurant in
+                            Johnson. See cafe hours, explore the menu, and make
+                            plans to come see us any day of the week!
+                        </p>
+                        <Button variant="outline" className="lg:px-[38.5px]">
+                            Our Location
+                        </Button>
+                    </div>
+                    <div className="lg:flex-1 relative w-full aspect-square lg:aspect-[1240/455] rounded-4xl relative  overflow-hidden">
                         <Image
                             src="/images/mock/mock_image_2.png"
                             alt="Cofelty coffee processing and packaging facility"
                             fill
+                            sizes="(max-width: 768px) 100vw"
                             className="object-cover"
                         />
                     </div>
