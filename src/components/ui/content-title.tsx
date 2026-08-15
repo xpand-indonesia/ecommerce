@@ -10,7 +10,7 @@ export function ContentTitle({ className, children }: ContentTitleProp) {
     return (
         <div
             className={cn(
-                'font-heading text-2xl :text-4xl font-bold text-gray-800',
+                'font-heading text-2xl lg:text-4xl font-bold text-gray-800',
                 className
             )}
         >
