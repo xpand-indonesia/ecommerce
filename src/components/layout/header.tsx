@@ -86,13 +86,31 @@ export function Header() {
                                 aria-label="Shopping cart"
                                 onClick={() => setIsCartOpen(true)}
                                 className={cn(
-                                    'transition-colors cursor-pointer flex',
+                                    'hidden lg:flex',
+                                    'transition-colors cursor-pointer',
                                     'group-[.transparent]:text-white group-[.transparent]:hover:text-white/80',
                                     'group-[.default]:hover:primary'
                                 )}
                             >
                                 <Bag2 className="size-6" />
                             </button>
+                            <Link
+                                href="/cart"
+                                className="inline-flex lg:hidden"
+                            >
+                                <button
+                                    type="button"
+                                    aria-label="Shopping cart"
+                                    className={cn(
+                                        'flex',
+                                        'transition-colors cursor-pointer',
+                                        'group-[.transparent]:text-white group-[.transparent]:hover:text-white/80',
+                                        'group-[.default]:hover:primary'
+                                    )}
+                                >
+                                    <Bag2 className="size-6" />
+                                </button>
+                            </Link>
                             <button
                                 type="button"
                                 aria-label="Search"
