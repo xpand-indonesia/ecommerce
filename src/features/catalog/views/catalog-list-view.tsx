@@ -7,7 +7,7 @@ import { Checkbox } from '@/components/ui/form/field/checkbox';
 import { Label } from '@/components/ui/form/label';
 import { cn } from '@/lib/utils';
 import React, { useState } from 'react';
-import { FilterCollapsible } from '../components/filter-collapsible';
+import { FilterItemCollapsible } from '../components/filter-item-collapsible';
 
 export function CatalogListView({
     name,
@@ -26,7 +26,8 @@ export function CatalogListView({
         <div className="flex items-stretch">
             <div
                 className={cn(
-                    'overflow-hidden transition-all duration-500 flex flex-col items-end',
+                    'hidden lg:flex flex-col items-end',
+                    'overflow-hidden transition-all duration-500',
                     isFilterOpen ? 'w-[343px]' : 'w-0'
                 )}
             >
@@ -37,7 +38,7 @@ export function CatalogListView({
                         </h2>
                         <div className="text-primary">42 Results</div>
                     </div>
-                    <FilterCollapsible title="Roast Level">
+                    <FilterItemCollapsible title="Roast Level">
                         <div className="space-y-2">
                             <div className="h-[48px] border border-gray-300 rounded-full"></div>
                             <div className="flex items-center justify-between text-sm text-gray-800">
@@ -45,8 +46,8 @@ export function CatalogListView({
                                 <div>Lighter</div>
                             </div>
                         </div>
-                    </FilterCollapsible>
-                    <FilterCollapsible title="Origin">
+                    </FilterItemCollapsible>
+                    <FilterItemCollapsible title="Origin">
                         <div className="space-y-4">
                             <div className="flex items-center gap-2">
                                 <Checkbox id="origin-burundi" />
@@ -85,8 +86,8 @@ export function CatalogListView({
                                 </Label>
                             </div>
                         </div>
-                    </FilterCollapsible>
-                    <FilterCollapsible title="Profile">
+                    </FilterItemCollapsible>
+                    <FilterItemCollapsible title="Profile">
                         <div className="space-y-2">
                             <div className="h-[48px] border border-gray-300 rounded-full"></div>
                             <div className="flex items-center justify-between text-sm text-gray-800">
@@ -94,13 +95,13 @@ export function CatalogListView({
                                 <div>Modern</div>
                             </div>
                         </div>
-                    </FilterCollapsible>
-                    <FilterCollapsible title="Process">
+                    </FilterItemCollapsible>
+                    <FilterItemCollapsible title="Process">
                         <div className="space-y-2"></div>
-                    </FilterCollapsible>
-                    <FilterCollapsible title="Variety">
+                    </FilterItemCollapsible>
+                    <FilterItemCollapsible title="Variety">
                         <div className="space-y-2"></div>
-                    </FilterCollapsible>
+                    </FilterItemCollapsible>
                     <Button className="w-full">Apply</Button>
                 </div>
             </div>

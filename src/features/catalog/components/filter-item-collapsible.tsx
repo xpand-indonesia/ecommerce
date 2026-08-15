@@ -8,7 +8,7 @@ import {
 } from '@/components/ui/collapsible';
 import { ReactNode, useState } from 'react';
 
-export function FilterCollapsible({
+export function FilterItemCollapsible({
     title,
     children,
 }: {
