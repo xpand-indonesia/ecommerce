@@ -37,23 +37,21 @@ export function Header() {
                     <nav className="flex items-center justify-between h-[var(--header-height)]">
                         <Link
                             href="/"
-                            className="flex items-center gap-2 shrink-0"
+                            className="flex items-center gap-2 shrink-0 w-[146px] h-[43px] relative"
                         >
                             <Image
                                 src="/images/mock/mock_logo_white.png"
                                 alt="Logo"
-                                width={0}
-                                height={43}
-                                sizes="100vw"
-                                className="w-auto h-[43px] group-[.default]:hidden"
+                                fill
+                                sizes="(max-width: 768px) 100vw"
+                                className="group-[.default]:hidden"
                             />
                             <Image
                                 src="/images/mock/mock_logo.png"
                                 alt="Logo"
-                                width={0}
-                                height={43}
-                                sizes="100vw"
-                                className="w-auto h-[43px] group-[.transparent]:hidden"
+                                fill
+                                sizes="(max-width: 768px) 100vw"
+                                className="group-[.transparent]:hidden"
                             />
                         </Link>
                         <div className="hidden lg:flex items-center gap-8">
