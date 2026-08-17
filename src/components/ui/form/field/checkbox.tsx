@@ -1,13 +1,13 @@
 'use client';
 
-import { cn } from "@/lib/utils";
-import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from '@/lib/utils';
+import { cva, type VariantProps } from 'class-variance-authority';
 
 const checkboxVariants = cva(
     `
         bg-background border border-gray-300
         flex items-center justify-center
-        peer-checked:bg-primary peer-checked:border-primary
+        peer-checked:bg-base-50 peer-checked:border-primary
         peer-checked:[&_svg]:opacity-100 peer-checked:[&_svg]:scale-100
     `,
     {
@@ -19,7 +19,7 @@ const checkboxVariants = cva(
         defaultVariants: {
             size: 'md',
         },
-    },
+    }
 );
 
 function Checkbox({
@@ -43,15 +43,17 @@ function Checkbox({
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                     strokeWidth="3"
-                    className="text-white opacity-0 scale-50 transition-all duration-200 ease-in-out pointer-events-none"
+                    className="text-primary opacity-0 scale-50 transition-all duration-200 ease-in-out pointer-events-none"
                 >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                    />
                 </svg>
             </div>
         </label>
     );
 }
 
-export {
-    Checkbox
-};
+export { Checkbox };
