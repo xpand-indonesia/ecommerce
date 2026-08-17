@@ -1,9 +1,13 @@
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/form/field/checkbox';
+import StepSlider from '@/components/ui/form/field/step-slider';
 import { Label } from '@/components/ui/form/label';
+import { useState } from 'react';
 import { FilterItemCollapsible } from './filter-item-collapsible';
 
 export function FilterForm() {
+    const [roastLevel, setRoastLevel] = useState<number>(7);
+
     return (
         <div className="h-full flex flex-col gap-6">
             <div className="flex items-center justify-between px-4 pt-4 lg:px-0 lg:pt-0">
@@ -13,6 +17,11 @@ export function FilterForm() {
             <div className="flex-1 px-4 max-h-[76.97044335vh] overflow-y-auto space-y-6 lg:flex-none lg:px-0 lg:max-h-none lg:overflow-visible">
                 <FilterItemCollapsible title="Roast Level">
                     <div className="space-y-2">
+                        <StepSlider
+                            steps={7}
+                            value={roastLevel}
+                            onChange={setRoastLevel}
+                        />
                         <div className="h-[48px] border border-gray-300 rounded-full"></div>
                         <div className="flex items-center justify-between text-sm text-gray-800">
                             <div>Darker</div>
