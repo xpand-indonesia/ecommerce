@@ -9,7 +9,7 @@ interface StepSliderProps {
     onChange?: (index: number) => void;
 }
 
-const TRACK_PADDING = 8;
+const INDICATOR_SIZE = 8;
 
 export default function StepSlider({
     steps = 7,
@@ -26,8 +26,8 @@ export default function StepSlider({
             if (!trackRef.current) return;
 
             const rect = trackRef.current.getBoundingClientRect();
-            const availableWidth = rect.width - TRACK_PADDING * 2;
-            const offsetX = clientX - rect.left - TRACK_PADDING;
+            const availableWidth = rect.width - INDICATOR_SIZE * 2;
+            const offsetX = clientX - rect.left - INDICATOR_SIZE;
 
             // Hitung persentase posisi di dalam track
             const clampedX = Math.max(0, Math.min(offsetX, availableWidth));
@@ -76,14 +76,14 @@ export default function StepSlider({
         steps > 1 ? (currentIndex / (steps - 1)) * 100 : 0;
 
     return (
-        <div className="w-full max-w-xl p-3 bg-white border border-slate-300 rounded-full flex items-center shadow-xs select-none">
+        <div className="w-full px-3 h-[48px] bg-white border border-input rounded-full flex items-center select-none">
             <div
                 ref={trackRef}
                 onPointerDown={handlePointerDown}
                 style={{
-                    height: `${TRACK_PADDING * 2}px`,
-                    paddingLeft: `${TRACK_PADDING / 2}px`,
-                    paddingRight: `${TRACK_PADDING / 2}px`,
+                    height: `${INDICATOR_SIZE * 2}px`,
+                    paddingLeft: `${INDICATOR_SIZE / 2}px`,
+                    paddingRight: `${INDICATOR_SIZE / 2}px`,
                 }}
                 className={cn(
                     'relative  w-full bg-gray-200 rounded-full flex items-center justify-between cursor-pointer touch-none'
@@ -96,17 +96,17 @@ export default function StepSlider({
                         <div
                             key={index}
                             style={{
-                                width: `${TRACK_PADDING}px`,
-                                height: `${TRACK_PADDING}px`,
+                                width: `${INDICATOR_SIZE}px`,
+                                height: `${INDICATOR_SIZE}px`,
                             }}
                             className="relative z-0 flex items-center justify-center"
                         >
                             <span
                                 style={{
-                                    width: `${isLarge ? TRACK_PADDING * 2 : TRACK_PADDING}px`,
-                                    height: `${isLarge ? TRACK_PADDING * 2 : TRACK_PADDING}px`,
-                                    minWidth: `${isLarge ? TRACK_PADDING * 2 : TRACK_PADDING}px`,
-                                    minHeight: `${isLarge ? TRACK_PADDING * 2 : TRACK_PADDING}px`,
+                                    width: `${isLarge ? INDICATOR_SIZE * 2 : INDICATOR_SIZE}px`,
+                                    height: `${isLarge ? INDICATOR_SIZE * 2 : INDICATOR_SIZE}px`,
+                                    minWidth: `${isLarge ? INDICATOR_SIZE * 2 : INDICATOR_SIZE}px`,
+                                    minHeight: `${isLarge ? INDICATOR_SIZE * 2 : INDICATOR_SIZE}px`,
                                 }}
                                 className="bg-gray-300 border border-gray-500 rounded-full"
                             />
@@ -117,28 +117,26 @@ export default function StepSlider({
                     className="absolute top-0 bottom-0 pointer-events-none"
                     style={{
                         height: '100%',
-                        left: `${TRACK_PADDING / 2}px`,
-                        right: `${TRACK_PADDING * 1.5}px`,
+                        left: `${INDICATOR_SIZE / 2}px`,
+                        right: `${INDICATOR_SIZE * 1.5}px`,
                     }}
                 >
                     <div
-                        className={`absolute top-1/2 -translate-y-1/2 z-10 flex items-center justify-center rounded-full ${
-                            isDragging
-                                ? 'transition-none scale-110'
-                                : 'transition-all duration-200 ease-out'
+                        className={`absolute top-1/2 -translate-y-1/2 z-10 flex items-center justify-center rounded-full transition-all ${
+                            isDragging ? 'scale-110' : 'duration-200 ease-out'
                         }`}
                         style={{
                             left: `${thumbPositionPercent}%`,
-                            width: `${TRACK_PADDING}px`,
-                            height: `${TRACK_PADDING}px`,
+                            width: `${INDICATOR_SIZE}px`,
+                            height: `${INDICATOR_SIZE}px`,
                         }}
                     >
                         <div
                             style={{
-                                width: `${TRACK_PADDING * 2}px`,
-                                height: `${TRACK_PADDING * 2}px`,
-                                minWidth: `${TRACK_PADDING * 2}px`,
-                                minHeight: `${TRACK_PADDING * 2}px`,
+                                width: `${INDICATOR_SIZE * 2}px`,
+                                height: `${INDICATOR_SIZE * 2}px`,
+                                minWidth: `${INDICATOR_SIZE * 2}px`,
+                                minHeight: `${INDICATOR_SIZE * 2}px`,
                             }}
                             className="bg-base-300 border border-primary rounded-full cursor-grab active:cursor-grabbing pointer-events-auto"
                         />

@@ -22,7 +22,6 @@ export function FilterForm() {
                             value={roastLevel}
                             onChange={setRoastLevel}
                         />
-                        <div className="h-[48px] border border-gray-300 rounded-full"></div>
                         <div className="flex items-center justify-between text-sm text-gray-800">
                             <div>Darker</div>
                             <div>Lighter</div>
@@ -71,10 +70,14 @@ export function FilterForm() {
                 </FilterItemCollapsible>
                 <FilterItemCollapsible title="Profile">
                     <div className="space-y-2">
-                        <div className="h-[48px] border border-gray-300 rounded-full"></div>
+                        <StepSlider
+                            steps={7}
+                            value={roastLevel}
+                            onChange={setRoastLevel}
+                        />
                         <div className="flex items-center justify-between text-sm text-gray-800">
-                            <div>Traditional</div>
-                            <div>Modern</div>
+                            <div>Darker</div>
+                            <div>Lighter</div>
                         </div>
                     </div>
                 </FilterItemCollapsible>
