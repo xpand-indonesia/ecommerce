@@ -1,9 +1,9 @@
 'use client';
 
-import * as React from 'react';
+import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { Accordion as AccordionPrimitive } from 'radix-ui';
-import { cn } from '@/lib/utils';
+import * as React from 'react';
 import { Plus } from '../icons';
 
 // Variants
@@ -34,7 +34,7 @@ const accordionItemVariants = cva('', {
 });
 
 const accordionTriggerVariants = cva(
-    'flex flex-1 items-center justify-between py-4 gap-2.5 text-foreground font-medium transition-all [&[data-state=open]>svg]:rotate-180 cursor-pointer',
+    'flex flex-1 items-center justify-between py-2 lg:py-4 gap-2.5 text-foreground font-medium transition-all [&[data-state=open]>svg]:rotate-180 cursor-pointer',
     {
         variants: {
             variant: {
@@ -51,7 +51,7 @@ const accordionTriggerVariants = cva(
             variant: 'default',
             indicator: 'plus',
         },
-    },
+    }
 );
 
 const accordionContentVariants = cva(
@@ -67,7 +67,7 @@ const accordionContentVariants = cva(
         defaultVariants: {
             variant: 'default',
         },
-    },
+    }
 );
 
 // Context
@@ -86,7 +86,7 @@ function Accordion(
     props: React.ComponentProps<typeof AccordionPrimitive.Root> &
         VariantProps<typeof accordionRootVariants> & {
             indicator?: 'plus';
-        },
+        }
 ) {
     const {
         className,
@@ -112,7 +112,7 @@ function Accordion(
 }
 
 function AccordionItem(
-    props: React.ComponentProps<typeof AccordionPrimitive.Item>,
+    props: React.ComponentProps<typeof AccordionPrimitive.Item>
 ) {
     const { className, children, ...rest } = props;
     const { variant } = React.useContext(AccordionContext);
@@ -129,7 +129,7 @@ function AccordionItem(
 }
 
 function AccordionTrigger(
-    props: React.ComponentProps<typeof AccordionPrimitive.Trigger>,
+    props: React.ComponentProps<typeof AccordionPrimitive.Trigger>
 ) {
     const { className, children, ...rest } = props;
     const { variant, indicator } = React.useContext(AccordionContext);
@@ -140,7 +140,7 @@ function AccordionTrigger(
                 data-slot="accordion-trigger"
                 className={cn(
                     accordionTriggerVariants({ variant, indicator }),
-                    className,
+                    className
                 )}
                 {...rest}
             >
@@ -157,7 +157,7 @@ function AccordionTrigger(
 }
 
 function AccordionContent(
-    props: React.ComponentProps<typeof AccordionPrimitive.Content>,
+    props: React.ComponentProps<typeof AccordionPrimitive.Content>
 ) {
     const { className, children, ...rest } = props;
     const { variant } = React.useContext(AccordionContext);
@@ -174,4 +174,4 @@ function AccordionContent(
 }
 
 // Exports
-export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
+export { Accordion, AccordionContent, AccordionItem, AccordionTrigger };
