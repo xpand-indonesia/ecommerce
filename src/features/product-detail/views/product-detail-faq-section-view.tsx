@@ -192,7 +192,7 @@ export const ProductDetailFAQSectionView = () => {
                 >
                     {FAQS.map((faq) => (
                         <AccordionItem value={faq.id} key={`faq-${faq.id}`}>
-                            <AccordionTrigger className="text-base lg:text-lg font-bold">
+                            <AccordionTrigger className="text-left text-base lg:text-lg font-bold">
                                 {faq.title}
                             </AccordionTrigger>
                             <AccordionContent>

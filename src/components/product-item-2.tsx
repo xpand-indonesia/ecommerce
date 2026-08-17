@@ -1,9 +1,9 @@
-import Image from "next/image";
-import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
-import { formatNumber } from "@/lib/utils";
-import { useMemo } from "react";
-import Link from "next/link";
+import { cn, formatNumber } from '@/lib/utils';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useMemo } from 'react';
+import { Badge } from './ui/badge';
+import { Button } from './ui/button';
 
 interface ProductItem2Props {
     id?: number | string;
@@ -12,10 +12,20 @@ interface ProductItem2Props {
     price: number;
     discount: number;
     stock: number;
-    isBestSeller?: boolean
-};
+    isBestSeller?: boolean;
+    className?: string;
+}
 
-const ProductItem2 = ({ id, image, name, price, discount, stock, isBestSeller = false }: ProductItem2Props) => {
+const ProductItem2 = ({
+    id,
+    image,
+    name,
+    price,
+    discount,
+    stock,
+    isBestSeller = false,
+    className,
+}: ProductItem2Props) => {
     const imageUrl = useMemo(() => {
         return `/images/mock/${image}`;
     }, [image]);
@@ -25,11 +35,11 @@ const ProductItem2 = ({ id, image, name, price, discount, stock, isBestSeller = 
     }, [price, discount]);
 
     const discountPercentage = useMemo(() => {
-        return discount / price * 100;
+        return (discount / price) * 100;
     }, [price, discount]);
 
     return (
-        <div className="flex flex-col gap-3 group">
+        <div className={cn('flex flex-col gap-3 group', className)}>
             {/* Product Image */}
             <Link href={`/product/${id}`}>
                 <div className="relative w-full aspect-square rounded-[32px] overflow-hidden bg-gray-200">
@@ -55,16 +65,19 @@ const ProductItem2 = ({ id, image, name, price, discount, stock, isBestSeller = 
 
                     {/* Click to Action */}
                     {stock > 0 && (
-                        <Button variant="primary" className="absolute bottom-3 left-3 right-3 h-10! text-xs">Buy Now</Button>
+                        <Button
+                            variant="primary"
+                            className="absolute bottom-3 left-3 right-3 h-10! text-xs"
+                        >
+                            Buy Now
+                        </Button>
                     )}
                 </div>
             </Link>
 
             {/* Product Information */}
             <div className="flex flex-col gap-1.5">
-                <h3 className="transition-colors">
-                    {name}
-                </h3>
+                <h3 className="transition-colors">{name}</h3>
                 <div className="flex items-center gap-2">
                     {discount > 0 && (
                         <span className="text-xs/none text-gray-500 line-through">
@@ -75,7 +88,9 @@ const ProductItem2 = ({ id, image, name, price, discount, stock, isBestSeller = 
                         {formatNumber(discountedPrice, { currency: 'IDR' })}
                     </span>
                     {discount > 0 && (
-                        <Badge variant="danger" className="h-5 py-0">OFF {formatNumber(discountPercentage)}%</Badge>
+                        <Badge variant="danger" className="h-5 py-0">
+                            OFF {formatNumber(discountPercentage)}%
+                        </Badge>
                     )}
                 </div>
             </div>
@@ -83,6 +98,4 @@ const ProductItem2 = ({ id, image, name, price, discount, stock, isBestSeller = 
     );
 };
 
-export {
-    ProductItem2
-};
+export { ProductItem2 };

@@ -1,3 +1,4 @@
+import { HeaderProp } from '@/components/layout';
 import {
     ProductDetailBlendSectionView,
     ProductDetailBrewProcessSectionView,
@@ -9,13 +10,16 @@ import {
 
 export default function ProductDetailPage() {
     return (
-        <div className="header-safe-0">
-            <ProductDetailSectionView />
-            <ProductDetailBlendSectionView />
-            <ProductDetailBrewProcessSectionView />
-            <ProductDetailFAQSectionView />
-            <ProductDetailReviewSectionView />
-            <ProductDetailRecommendationSectionView />
-        </div>
+        <>
+            <HeaderProp style="default" />
+            <div className="header-safe-0">
+                <ProductDetailSectionView />
+                <ProductDetailBlendSectionView />
+                <ProductDetailBrewProcessSectionView />
+                <ProductDetailFAQSectionView />
+                <ProductDetailReviewSectionView />
+                <ProductDetailRecommendationSectionView />
+            </div>
+        </>
     );
 }
