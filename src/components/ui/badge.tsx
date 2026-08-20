@@ -4,7 +4,7 @@ import { cva, VariantProps } from 'class-variance-authority';
 const badgeVariants = cva('rounded-full flex items-center justify-center', {
     variants: {
         size: {
-            xs: 'text-xs/none p-1',
+            xs: 'text-xs leading-[14px] p-1',
             sm: 'text-sm/none py-1 px-2',
         },
         variant: {
