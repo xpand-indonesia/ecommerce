@@ -7,7 +7,7 @@ import * as React from 'react';
 import { XCircle } from '../icons/x-circle';
 
 const dialogContentVariants = cva(
-    'relative flex flex-col fixed outline-0 z-50 bg-white p-0 shadow-lg shadow-black/5 duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 rounded-lg',
+    'relative flex flex-col fixed outline-0 z-50 bg-white p-0 shadow-lg shadow-black/5 duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 rounded-2xl',
     {
         variants: {
             variant: {

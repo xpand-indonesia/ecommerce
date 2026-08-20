@@ -1,17 +1,10 @@
-import { Plus } from '@/components/icons';
-import { XCircle } from '@/components/icons/x-circle';
 import { HeaderProp } from '@/components/layout';
 import { ProductItem } from '@/components/product-item';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import Container from '@/components/ui/container';
 import { ContentTitle } from '@/components/ui/content-title';
-import { InputCounter } from '@/components/ui/form/field/input-counter';
-import { Separator } from '@/components/ui/separator';
-import { ApplyCouponForm, CartSummary } from '@/features/cart';
-import { formatNumber } from '@/lib/utils';
+import { ApplyCouponForm, CartFlatList, CartSummary } from '@/features/cart';
 import Link from 'next/link';
-import React from 'react';
 
 export default function CartPage() {
     const items = Array.from({ length: 2 });
@@ -28,60 +21,7 @@ export default function CartPage() {
                                 {items.length} Items
                             </div>
                         </div>
-                        <div className="flex flex-col gap-4 lg:gap-6">
-                            {items.map((_, idx) => (
-                                <React.Fragment key={`cart-item-${idx}`}>
-                                    {idx > 0 && (
-                                        <Separator className="bg-gray-300" />
-                                    )}
-                                    <div className="flex gap-2 lg:gap-4 relative">
-                                        <div className="size-[100px] bg-[#F7F7F7] rounded-[16px]"></div>
-                                        <div className="flex flex-col items-start gap-2">
-                                            <div>
-                                                <div>Funki Mushroom Coffee</div>
-                                                <div className="flex items-center gap-2 text-sm">
-                                                    <div className="line-through text-gray-500">
-                                                        {formatNumber(60000, {
-                                                            currency: 'IDR',
-                                                        })}
-                                                    </div>
-                                                    <div className="text-gray-800">
-                                                        {formatNumber(60000, {
-                                                            currency: 'IDR',
-                                                        })}
-                                                    </div>
-                                                    <Badge
-                                                        variant="danger"
-                                                        className="uppercase"
-                                                    >
-                                                        Off 20%
-                                                    </Badge>
-                                                </div>
-                                                <div className="text-sm text-gray-800 mt-1">
-                                                    27oz - Red Bean
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <InputCounter
-                                                    className="h-[40px] max-w-[145px] lg:h-[33px] lg:max-w-[160px]"
-                                                    value={2}
-                                                />
-                                            </div>
-                                            <div className="text-primary text-sm flex items-center gap-2 py-2">
-                                                <Plus className="size-4" />
-                                                <span className="leading-[1.214285714]">
-                                                    Add Note
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-[20.833333333%] lg:-translate-y-[28.125%] size-6 lg:size-8 rounded-full bg-white shadow-[0_4px_18px_rgba(0,0,0,0.1)] flex items-center justify-center cursor-pointer">
-                                            <XCircle className="text-primary size-3 lg:size-4" />
-                                        </div>
-                                    </div>
-                                </React.Fragment>
-                            ))}
-                        </div>
-                        <Separator className="bg-gray-300" />
+                        <CartFlatList items={items} />
                         <ContentTitle className="hidden lg:block">
                             Recommendation For You
                         </ContentTitle>
